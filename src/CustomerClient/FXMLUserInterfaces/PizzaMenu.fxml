@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+  <children>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="800.0" prefWidth="900.0" style="-fx-background-color: #17181a;" VBox.vgrow="ALWAYS">
+         <children>
+            <Label layoutX="699.0" layoutY="153.0" text="Spicy 3 Cheese" textFill="WHITE">
+               <font>
+                  <Font name="Ebrima Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="408.0" layoutY="153.0" text="Spicy Bacon Deluxe" textFill="WHITE">
+               <font>
+                  <Font name="Ebrima Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="108.0" layoutY="151.0" text="Hawaiian Craze" textFill="WHITE">
+               <font>
+                  <Font name="Ebrima Bold" size="24.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="108.0" layoutY="204.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@4.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="408.0" layoutY="204.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@6.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="699.0" layoutY="204.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@3.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="108.0" layoutY="353.0" prefHeight="98.0" prefWidth="201.0" text="Enjoy our fresh hawaiian style pizza baked with savoury incredients from the local market" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font name="Palatino Linotype Bold Italic" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="404.0" layoutY="345.0" prefHeight="98.0" prefWidth="201.0" text="Spice up your game with our spicy Jalapeño Bacon Deluxe" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font name="Palatino Linotype Bold Italic" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="699.0" layoutY="345.0" prefHeight="98.0" prefWidth="213.0" text="Our spicy 3 cheese vegeterian-friendly pizza will make you crave for more" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font name="Palatino Linotype Bold Italic" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="1002.0" layoutY="151.0" text="Mushroom Cream Light" textFill="WHITE">
+               <font>
+                  <Font name="Ebrima Bold" size="24.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="1002.0" layoutY="204.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@5.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="1002.0" layoutY="353.0" prefHeight="98.0" prefWidth="213.0" text="This blend of mushrooms and peppers sprinkled on a light dough will make you want to lick your fingers" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font name="Palatino Linotype Bold Italic" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="108.0" layoutY="460.0" text="REGULAR" textFill="WHITE">
+               <font>
+                  <Font name="Ebrima Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="108.0" layoutY="535.0" text="MEDIUM" textFill="WHITE">
+               <font>
+                  <Font name="Ebrima Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="108.0" layoutY="611.0" text="LARGE" textFill="WHITE">
+               <font>
+                  <Font name="Ebrima Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="108.0" layoutY="475.0" text="Rs 199" textFill="#ffb300">
+               <font>
+                  <Font name="Ebrima Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="107.0" layoutY="550.0" text="Rs 299" textFill="#ffb300">
+               <font>
+                  <Font name="Ebrima Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="108.0" layoutY="626.0" text="Rs 399" textFill="#ffb300">
+               <font>
+                  <Font name="Ebrima Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="108.0" layoutY="500.0" text="+ 1 FREE 10 OZ PEPSI" textFill="#ff5e00">
+               <font>
+                  <Font name="Dubai Medium" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="111.0" layoutY="575.0" text="+ 2 FREE MILKSHAKES" textFill="#ff5e00">
+               <font>
+                  <Font name="Dubai Medium" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="109.0" layoutY="653.0" text="+ 3 FREE DRINKS OF ANY CHOICE" textFill="#ff5e00">
+               <font>
+                  <Font name="Dubai Medium" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="405.0" layoutY="458.0" text="REGULAR" textFill="WHITE">
+               <font>
+                  <Font name="Ebrima Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="405.0" layoutY="533.0" text="MEDIUM" textFill="WHITE">
+               <font>
+                  <Font name="Ebrima Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="405.0" layoutY="609.0" text="LARGE" textFill="WHITE">
+               <font>
+                  <Font name="Ebrima Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="405.0" layoutY="473.0" text="Rs 249" textFill="#ffb300">
+               <font>
+                  <Font name="Ebrima Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="404.0" layoutY="548.0" text="Rs 349" textFill="#ffb300">
+               <font>
+                  <Font name="Ebrima Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="405.0" layoutY="624.0" text="Rs 449" textFill="#ffb300">
+               <font>
+                  <Font name="Ebrima Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="405.0" layoutY="498.0" text="+ 1 FREE 10 OZ PEPSI" textFill="#ff5e00">
+               <font>
+                  <Font name="Dubai Medium" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="408.0" layoutY="573.0" text="+ 2 FREE MILKSHAKES" textFill="#ff5e00">
+               <font>
+                  <Font name="Dubai Medium" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="406.0" layoutY="651.0" text="+ 3 FREE DRINKS OF ANY CHOICE" textFill="#ff5e00">
+               <font>
+                  <Font name="Dubai Medium" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="700.0" layoutY="458.0" text="REGULAR" textFill="WHITE">
+               <font>
+                  <Font name="Ebrima Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="700.0" layoutY="533.0" text="MEDIUM" textFill="WHITE">
+               <font>
+                  <Font name="Ebrima Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="700.0" layoutY="609.0" text="LARGE" textFill="WHITE">
+               <font>
+                  <Font name="Ebrima Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="700.0" layoutY="473.0" text="Rs 149" textFill="#ffb300">
+               <font>
+                  <Font name="Ebrima Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="699.0" layoutY="548.0" text="Rs 249" textFill="#ffb300">
+               <font>
+                  <Font name="Ebrima Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="700.0" layoutY="624.0" text="Rs 349" textFill="#ffb300">
+               <font>
+                  <Font name="Ebrima Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="700.0" layoutY="498.0" text="+ 1 FREE 10 OZ PEPSI" textFill="#ff5e00">
+               <font>
+                  <Font name="Dubai Medium" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="703.0" layoutY="573.0" text="+ 2 FREE MILKSHAKES" textFill="#ff5e00">
+               <font>
+                  <Font name="Dubai Medium" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="701.0" layoutY="651.0" text="+ 3 FREE DRINKS OF ANY CHOICE" textFill="#ff5e00">
+               <font>
+                  <Font name="Dubai Medium" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="1003.0" layoutY="458.0" text="REGULAR" textFill="WHITE">
+               <font>
+                  <Font name="Ebrima Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="1003.0" layoutY="533.0" text="MEDIUM" textFill="WHITE">
+               <font>
+                  <Font name="Ebrima Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="1003.0" layoutY="609.0" text="LARGE" textFill="WHITE">
+               <font>
+                  <Font name="Ebrima Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="1003.0" layoutY="473.0" text="Rs 139" textFill="#ffb300">
+               <font>
+                  <Font name="Ebrima Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="1002.0" layoutY="548.0" text="Rs 239" textFill="#ffb300">
+               <font>
+                  <Font name="Ebrima Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="1003.0" layoutY="624.0" text="Rs 339" textFill="#ffb300">
+               <font>
+                  <Font name="Ebrima Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="1003.0" layoutY="498.0" text="+ 1 FREE 10 OZ PEPSI" textFill="#ff5e00">
+               <font>
+                  <Font name="Dubai Medium" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="1006.0" layoutY="573.0" text="+ 2 FREE MILKSHAKES" textFill="#ff5e00">
+               <font>
+                  <Font name="Dubai Medium" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="1004.0" layoutY="651.0" text="+ 3 FREE DRINKS OF ANY CHOICE" textFill="#ff5e00">
+               <font>
+                  <Font name="Dubai Medium" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="759.0" layoutY="57.0" text="Online Pizza Ordering System    | " textFill="WHITE">
+               <font>
+                  <Font name="Roboto Medium" size="18.0" />
+               </font>
+            </Label>
+            <Button fx:id="menuBackBtn" cancelButton="true" layoutX="1041.0" layoutY="59.0" mnemonicParsing="false" style="-fx-background-color: #29b6f6; -fx-border-style: none; -fx-border-width: 0; -fx-border-insets: 0; -fx-background-radius: 0;" text="GO BACK TO ORDER PAGE" textFill="WHITE">
+               <font>
+                  <Font name="Roboto Medium" size="12.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="89.0" fitWidth="267.0" layoutX="100.0" layoutY="30.0" pickOnBounds="true">
+               <image>
+                  <Image url="@0.png" />
+               </image>
+            </ImageView>
+         </children>
+    </AnchorPane>
+  </children>
+</VBox>
