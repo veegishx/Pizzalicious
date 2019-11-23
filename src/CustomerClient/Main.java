@@ -7,17 +7,26 @@
 //import javafx.stage.Stage;
 //
 //public class Main extends Application {
-//
+//    /*
+//    Pizzalicious Pizzeria Client JavaFX start() method
+//    This is the main menu interface for the client. Since we are using JavaFX, the core logic of the
+//    client has been defined in the Controller.java class.
+//     */
 //    @Override
 //    public void start(Stage primaryStage) throws Exception{
-//        Parent root = FXMLLoader.load(getClass().getResource("FXMLUserInterfaces/Customer/PizzaMenu.fxml"));
+//        Parent root = FXMLLoader.load(getClass().getResource("FXMLUserInterfaces/OrderPizza.fxml"));
 //        primaryStage.setTitle("Pizza Menu");
-//        primaryStage.setScene(new Scene(root, 1280, 700));
+//        primaryStage.setScene(new Scene(root));
+//        primaryStage.setMaximized(true);
 //        primaryStage.show();
+//        //Scene scene = primaryStage.getScene();
+//
+//
 //    }
 //
-//
-//    public static void main(String[] args) {
+//    public static void main(String[] args)
+//    {
 //        launch(args);
 //    }
+//
 //}

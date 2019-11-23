@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="734.0" prefWidth="1036.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CustomerClient.Controller">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="734.0" prefWidth="1036.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CustomerClient.CustomerController">
   <children> 
     <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="663.0" prefWidth="1036.0" style="-fx-background-color: #17181a;" VBox.vgrow="ALWAYS">
          <children>
@@ -55,12 +55,12 @@
                </children>
             </Pane>
             <ListView fx:id="ordersListView" layoutX="34.0" layoutY="324.0" prefHeight="297.0" prefWidth="756.0" style="-fx-background-color: #202124;" styleClass="ordersList" stylesheets="@OrderPizzaStyles.css" />
-            <Label layoutX="34.0" layoutY="646.0" text="Items in order queue:" textFill="WHITE">
+            <Label layoutX="32.0" layoutY="630.0" text="Items in order queue:" textFill="WHITE">
                <font>
                   <Font name="Ebrima" size="18.0" />
                </font>
             </Label>
-            <Label fx:id="itemsInOrderQueue" layoutX="220.0" layoutY="644.0" text="0" textFill="WHITE">
+            <Label fx:id="itemsInOrderQueue" layoutX="218.0" layoutY="628.0" text="0" textFill="WHITE">
                <font>
                   <Font name="Dubai Regular" size="18.0" />
                </font>
@@ -75,6 +75,16 @@
                   <Font name="Dubai Regular" size="12.0" />
                </font>
             </Button>
+            <Label layoutX="32.0" layoutY="662.0" text="Order Total (Rs): " textFill="WHITE">
+               <font>
+                  <Font name="Ebrima" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="itemsInOrderTotal" layoutX="218.0" layoutY="660.0" text="0" textFill="WHITE">
+               <font>
+                  <Font name="Dubai Regular" size="18.0" />
+               </font>
+            </Label>
          </children>
     </AnchorPane>
   </children>
