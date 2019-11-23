@@ -24,17 +24,17 @@
       </ImageView>
       <AnchorPane layoutX="430.0" layoutY="167.0" prefHeight="477.0" prefWidth="520.0" style="-fx-background-radius: 8px; -fx-background-color: #1d2021;">
          <children>
-            <TextField layoutX="38.0" layoutY="132.0" prefHeight="30.0" prefWidth="187.0" promptText="Enter Your Email" stylesheets="@RegistrationClient.css">
+            <TextField fx:id="signUpEmail" layoutX="38.0" layoutY="132.0" prefHeight="30.0" prefWidth="187.0" promptText="Enter Your Email" stylesheets="@RegistrationClient.css">
                <font>
                   <Font name="Segoe UI" size="14.0" />
                </font>
             </TextField>
-            <PasswordField layoutX="281.0" layoutY="131.0" prefHeight="30.0" prefWidth="187.0" promptText="Enter Your Password" stylesheets="@RegistrationClient.css">
+            <PasswordField fx:id="signUpPassword" layoutX="281.0" layoutY="131.0" prefHeight="30.0" prefWidth="187.0" promptText="Enter Your Password" stylesheets="@RegistrationClient.css">
                <font>
                   <Font name="Segoe UI" size="14.0" />
                </font>
             </PasswordField>
-            <TextField layoutX="40.0" layoutY="213.0" prefHeight="30.0" prefWidth="426.0" promptText="Enter Your Residential Address" stylesheets="@RegistrationClient.css">
+            <TextField fx:id="signUpAddress" layoutX="40.0" layoutY="213.0" prefHeight="30.0" prefWidth="426.0" promptText="Enter Your Residential Address" stylesheets="@RegistrationClient.css">
                <font>
                   <Font name="Segoe UI" size="14.0" />
                </font></TextField>
@@ -53,16 +53,11 @@
                   <Font name="Segoe UI Bold" size="14.0" />
                </font>
             </Label>
-            <TextField layoutX="38.0" layoutY="57.0" prefHeight="30.0" prefWidth="187.0" promptText="Enter Your First Name" stylesheets="@RegistrationClient.css">
+            <TextField fx:id="signUpFname" layoutX="38.0" layoutY="57.0" prefHeight="30.0" prefWidth="187.0" promptText="Enter Your First Name" stylesheets="@RegistrationClient.css">
                <font>
                   <Font name="Segoe UI" size="14.0" />
                </font>
             </TextField>
-            <PasswordField layoutX="281.0" layoutY="56.0" prefHeight="30.0" prefWidth="187.0" promptText="Enter Your Last Name" stylesheets="@RegistrationClient.css">
-               <font>
-                  <Font name="Segoe UI" size="14.0" />
-               </font>
-            </PasswordField>
             <Label layoutX="281.0" layoutY="32.0" text="LAST NAME" textFill="WHITE">
                <font>
                   <Font name="Segoe UI Bold" size="14.0" />
@@ -73,7 +68,7 @@
                   <Font name="Segoe UI Bold" size="14.0" />
                </font>
             </Label>
-            <TextField layoutX="40.0" layoutY="291.0" prefHeight="30.0" prefWidth="205.0" promptText="Enter Your Phone Number" stylesheets="@RegistrationClient.css">
+            <TextField fx:id="signUpPhone" layoutX="40.0" layoutY="291.0" prefHeight="30.0" prefWidth="205.0" promptText="Enter Your Phone Number" stylesheets="@RegistrationClient.css">
                <font>
                   <Font name="Segoe UI" size="14.0" />
                </font></TextField>
@@ -91,13 +86,18 @@
                <font>
                   <Font name="Segoe UI Bold" size="12.0" />
                </font></CheckBox>
-            <Button fx:id="customerSignUpBtn" layoutX="37.0" layoutY="402.0" mnemonicParsing="false" onAction="#customerSignUp" prefHeight="32.0" prefWidth="111.0" style="-fx-background-color: #00aaff; -fx-background-radius: 0;" stylesheets="@RegistrationClient.css" text="SIGN UP" textFill="WHITE">
+            <Button fx:id="signUpBtn" layoutX="37.0" layoutY="402.0" mnemonicParsing="false" onAction="#customerSignUp" prefHeight="32.0" prefWidth="111.0" style="-fx-background-color: #00aaff; -fx-background-radius: 0;" stylesheets="@RegistrationClient.css" text="SIGN UP" textFill="WHITE">
                <font>
                   <Font name="Segoe UI Bold" size="12.0" />
                </font></Button>
             <Hyperlink fx:id="tosLink" layoutX="225.0" layoutY="350.0" onAction="#showTos" text="Terms of Use" />
             <Label layoutX="303.0" layoutY="353.0" text="and" textFill="WHITE" />
             <Hyperlink fx:id="policyLink" layoutX="325.0" layoutY="350.0" onAction="#showPolicy" text="Privacy Policy" />
+            <TextField fx:id="signUpLname" layoutX="280.0" layoutY="57.0" prefHeight="30.0" prefWidth="187.0" promptText="Enter Your First Name" stylesheets="@RegistrationClient.css">
+               <font>
+                  <Font name="Segoe UI" size="14.0" />
+               </font>
+            </TextField>
          </children>
          <effect>
             <DropShadow radius="21.86" width="68.44" />

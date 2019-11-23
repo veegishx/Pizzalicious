@@ -10,8 +10,8 @@
     -fx-border-color: transparent transparent #00aaff transparent;
 }
 .text-field:focused {
-    -fx-border-width: 2px;
-    -fx-border-color: transparent transparent #00aaff transparent;
+    -fx-border-width: 1px;
+    -fx-border-color: transparent transparent #00ff80 transparent;
     -fx-text-fill: #FFFFFF;
     -fx-text-inner-color: #FFFFFF;
 }
