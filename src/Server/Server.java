@@ -151,7 +151,7 @@ public class Server implements Runnable {
                                 PreparedStatement preparedStmt = conn.prepareStatement(query);
                                 preparedStmt.setDouble(1,orderTotalPrice );
                                 preparedStmt.setInt(2,orderedBy);
-                                preparedStmt.setObject(3, pizzaContent);
+                                preparedStmt.setString(3, pizzaContent);
                                 preparedStmt.setInt(4, staffID);
 
                                 // execute the preparedstatement
@@ -268,30 +268,31 @@ public class Server implements Runnable {
                                 ResultSet resultSet = preparedStmt.executeQuery();
                                 int orderIdResult, orderByResult, staffId;
                                 double orderTotalPriceResult ;
-                                Object orderObject;
+                                String orderContentResult;
                                 ArrayList<PizzaOrder> results = new ArrayList<PizzaOrder>();
                                 PizzaOrder order;
                                 while (resultSet.next()) {
                                     orderIdResult = resultSet.getInt("orderId");
                                     orderTotalPriceResult = resultSet.getDouble("orderTotalPrice");
                                     orderByResult = resultSet.getInt("orderBy");
-                                    orderObject = resultSet.getObject(4);
+                                    orderContentResult = resultSet.getString("orderContent");
                                     staffId = resultSet.getInt("staffId");
-                                    order = new PizzaOrder(orderIdResult, orderTotalPriceResult, staffId, orderByResult, orderObject);
+                                    ArrayList<Pizza> ttt = new ArrayList<Pizza>();
+                                    order = new PizzaOrder(orderIdResult, orderTotalPriceResult, orderByResult, staffId, "1");
+                                    System.out.println(orderContentResult);
                                     results.add(order);
                                 }
 
-                                outToClient.writeObject(results);
-                                outToClient.flush();
-
-                                System.out.println(results.size());
+                                for (int i = 0; i < results.size(); i++) {
+                                    System.out.println(results.get(i));
+                                }
 
                                 outToClient.writeUTF("orders_ok");
                                 outToClient.flush();
                                 conn.close();
                             } catch (Exception e) {
                                 System.err.println("Got an exception!");
-                                System.err.println(e.getMessage());
+                                e.printStackTrace();
                             }// try for database
                             break;
 

@@ -58,7 +58,7 @@ public class OrderController implements Initializable {
         objOutStream.writeUTF("read_orders");
         objOutStream.flush();
 
-        ArrayList results = (ArrayList) objInStream.readObject();
+        ArrayList<PizzaOrder> results = (ArrayList<PizzaOrder>) objInStream.readObject();
         System.out.println(results);
     }
 }
