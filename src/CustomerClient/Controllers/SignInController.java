@@ -18,6 +18,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import java.net.UnknownHostException;
 import java.util.Optional;
+import java.util.prefs.Preferences;
 
 public class SignInController implements Initializable {
     public static String serverHostName = "localhost";
@@ -25,6 +26,7 @@ public class SignInController implements Initializable {
     private Socket connectionSocket;
     public static ObjectInputStream objInStream;
     public static ObjectOutput objOutStream;
+    private Preferences prefs;
 
     @FXML private AnchorPane rootSignInPane;
     @FXML private TextField signInEmail;
@@ -59,6 +61,8 @@ public class SignInController implements Initializable {
         objOutStream.flush();
         String svrStatus = (String) objInStream.readUTF();
         if (svrStatus.equals("sign_in_ok")){
+            Context.getInstance().currentUser().setEmailAddress(email);
+
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
             alert.setTitle("Pizzalicious User Sign In Status");
             alert.setHeaderText("Account Successfully signed in.");

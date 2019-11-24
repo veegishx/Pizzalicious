@@ -16,12 +16,18 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.Calendar;
 import java.util.ResourceBundle;
+import java.util.prefs.BackingStoreException;
+import java.util.prefs.Preferences;
 
 public class DashboardController implements Initializable {
     @FXML private AnchorPane pizzaOfTheDayPane;
     @FXML private Label ordersDateLabel;
+    @FXML private Label nameLabel;
 
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        String currentUserEmail = Context.getInstance().currentUser().getEmailAddress();
+        nameLabel.setText(currentUserEmail);
+
         fadeIn.setNode(pizzaOfTheDayPane);
         fadeIn.setFromValue(0.0);
         fadeIn.setToValue(1.0);
