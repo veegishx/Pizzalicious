@@ -62,7 +62,7 @@ public class SignUpController implements Initializable {
         String phoneNo = signUpPhone.getText();
         String password = signUpPassword.getText();
 
-        User U1 = new User(firstName, lastName, password, email, address, phoneNo);
+        User U1 = new User(firstName, lastName, email, password, address, phoneNo);
 
         objOutStream.writeUTF("user_create");
         objOutStream.flush();

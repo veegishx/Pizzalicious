@@ -2,25 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/ManagerClient/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Pizzalicious/CustomerClient/Controllers/DashboardController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Pizzalicious/CustomerClient/Controllers/DashboardController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Pizzalicious/ManagerClient/Controllers/OrderController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Pizzalicious/ManagerClient/Controllers/OrderController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Pizzalicious/ManagerClient/FXMLUserInterfaces/LoginStaff.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Pizzalicious/ManagerClient/FXMLUserInterfaces/LoginStaff.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Pizzalicious/ManagerClient/FXMLUserInterfaces/ManageOrdersDashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Pizzalicious/ManagerClient/FXMLUserInterfaces/ManageOrdersDashboard.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Pizzalicious/ManagerClient/FXMLUserInterfaces/RegisterStaff.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Pizzalicious/ManagerClient/FXMLUserInterfaces/RegisterStaff.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Pizzalicious/Model/PizzaOrder.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Pizzalicious/Model/PizzaOrder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Pizzalicious/Server/Server.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Pizzalicious/Server/Server.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CustomerClient/Controllers/DashboardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CustomerClient/Controllers/DashboardController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CustomerClient/FXMLUserInterfaces/Dashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/CustomerClient/FXMLUserInterfaces/Dashboard.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ManagerClient/Controllers/LogInStaffController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ManagerClient/Controllers/LogInStaffController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ManagerClient/Controllers/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ManagerClient/Controllers/OrderController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ManagerClient/Controllers/RegisterStaffController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ManagerClient/Controllers/RegisterStaffController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ManagerClient/FXMLUserInterfaces/LoginStaff.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/ManagerClient/FXMLUserInterfaces/LoginStaff.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ManagerClient/FXMLUserInterfaces/ManageOrdersDashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/ManagerClient/FXMLUserInterfaces/ManageOrdersDashboard.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ManagerClient/FXMLUserInterfaces/RegisterStaff.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/ManagerClient/FXMLUserInterfaces/RegisterStaff.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/PizzaOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/PizzaOrder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server/Server.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CustomerClient/Controllers/SignUpController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CustomerClient/Controllers/SignUpController.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -315,10 +298,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Server" />
-        <item itemvalue="Application.DashboardClient" />
         <item itemvalue="Application.Main (1)" />
-        <item itemvalue="Application.RegisterStaffClient" />
         <item itemvalue="Application.ManagerOrderClient" />
+        <item itemvalue="Application.DashboardClient" />
+        <item itemvalue="Application.RegisterStaffClient" />
       </list>
     </recent_temporary>
   </component>
@@ -338,7 +321,8 @@
       <workItem from="1574402260995" duration="22526000" />
       <workItem from="1574494070870" duration="51000" />
       <workItem from="1574502453288" duration="17543000" />
-      <workItem from="1574572956387" duration="50717000" />
+      <workItem from="1574572956387" duration="51521000" />
+      <workItem from="1574635065447" duration="168000" />
     </task>
     <servers />
   </component>
