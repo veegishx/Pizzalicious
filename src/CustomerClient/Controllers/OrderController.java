@@ -27,6 +27,8 @@ public class OrderController implements Initializable {
     @FXML private TextField orderQuantityTxt;
     @FXML private ListView<VBox> ordersListView;
     @FXML private Label itemsInOrderQueue;
+    @FXML private Label itemsInOrderTotal;
+    int totalOrderPice = 0;
 
     public void initialize(URL location, ResourceBundle resources) {
         orderTypeDropdown.getItems().removeAll(orderTypeDropdown.getItems());
@@ -41,7 +43,7 @@ public class OrderController implements Initializable {
     }
 
     public void viewMenu() throws IOException {
-        Parent pizzaMenu = FXMLLoader.load(getClass().getResource("FXMLUserInterfaces/PizzaMenu.fxml"));
+        Parent pizzaMenu = FXMLLoader.load(getClass().getResource("../FXMLUserInterfaces/PizzaMenu.fxml"));
         Stage stage = new Stage();
         stage.setTitle("Pizza Menu");
         stage.setScene(new Scene(pizzaMenu, 1350, 700));
@@ -50,7 +52,11 @@ public class OrderController implements Initializable {
 
     public void updateOrder() throws FileNotFoundException {
         // Get order values
+        String orderSize =  orderSizeDropdown.getValue();
+        int orderQuantity =  Integer.parseInt(orderQuantityTxt.getText());
         String orderType = orderTypeDropdown.getValue();
+
+        // Get order Label Values
         String orderTypeLabel = orderTypeDropdown.getValue();
         String orderSizeLabel = "Pizza Size: " + orderSizeDropdown.getValue();
         String orderQuantityLabel = "Ordered Quantity: " + orderQuantityTxt.getText();
@@ -64,15 +70,59 @@ public class OrderController implements Initializable {
         ImageView orderListViewThumbnail;
         switch (orderType) {
             case "Hawaiian Craze":
+                switch (orderSize) {
+                    case "Regular":
+                        totalOrderPice += orderQuantity * 199;
+                        break;
+                    case "Medium":
+                        totalOrderPice += orderQuantity * 299;
+                        break;
+                    case "Large":
+                        totalOrderPice += orderQuantity * 399;
+                        break;
+                }
                 orderListViewThumbnail = new ImageView(new Image("CustomerClient/FXMLUserInterfaces/Images/4.png"));
                 break;
             case "Spicy Bacon Deluxe":
+                switch (orderSize) {
+                    case "Regular":
+                        totalOrderPice += orderQuantity * 249;
+                        break;
+                    case "Medium":
+                        totalOrderPice += orderQuantity * 349;
+                        break;
+                    case "Large":
+                        totalOrderPice += orderQuantity * 449;
+                        break;
+                }
                 orderListViewThumbnail = new ImageView(new Image("CustomerClient/FXMLUserInterfaces/Images/6.png"));
                 break;
             case "Spicy 3 Cheese":
+                switch (orderSize) {
+                    case "Regular":
+                        totalOrderPice += orderQuantity * 149;
+                        break;
+                    case "Medium":
+                        totalOrderPice += orderQuantity * 249;
+                        break;
+                    case "Large":
+                        totalOrderPice += orderQuantity * 349;
+                        break;
+                }
                 orderListViewThumbnail = new ImageView(new Image("CustomerClient/FXMLUserInterfaces/Images/3.png"));
                 break;
             default:
+                switch (orderSize) {
+                    case "Regular":
+                        totalOrderPice += orderQuantity * 139;
+                        break;
+                    case "Medium":
+                        totalOrderPice += orderQuantity * 239;
+                        break;
+                    case "Large":
+                        totalOrderPice += orderQuantity * 339;
+                        break;
+                }
                 orderListViewThumbnail = new ImageView(new Image("CustomerClient/FXMLUserInterfaces/Images/5.png"));
                 break;
         }
@@ -96,11 +146,14 @@ public class OrderController implements Initializable {
         ordersListView.setStyle("-fx-background-color:  #202124;");
 
         itemsInOrderQueue.setText(String.valueOf(ordersListView.getItems().size()));
+        itemsInOrderTotal.setText(String.valueOf(totalOrderPice));
     }
 
     public void clearOrderList() {
         ordersListView.getItems().clear();
         itemsInOrderQueue.setText("0");
+        itemsInOrderTotal.setText("0");
+        totalOrderPice = 0;
     }
 
     public void confirmOrderList() {

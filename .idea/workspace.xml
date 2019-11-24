@@ -2,73 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/CustomerClient/Controllers/DashboardController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/CustomerClient/DashboardClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/CustomerClient/FXMLUserInterfaces/Css/Dashboard.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/CustomerClient/FXMLUserInterfaces/Dashboard.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/CustomerClient/FXMLUserInterfaces/Images/beanstalk-dark.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/CustomerClient/FXMLUserInterfaces/Images/cute-round-avatar-png-drawing-doodle-clipart-09d35cae9b3a9087.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/CustomerClient/FXMLUserInterfaces/Images/delivery-icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/CustomerClient/FXMLUserInterfaces/Images/memphis-mini-dark.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/CustomerClient/FXMLUserInterfaces/Images/papyrus-dark.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/CustomerClient/FXMLUserInterfaces/Images/what-the-hex-dark.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/mysql_connector_java_5_1_48.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Model/Pizza.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Model/PizzaOrder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Model/Staff.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Model/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Server/Server.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/mysql-connector-java-5.1.48-bin.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/mysql-connector-java-5.1.48.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pizzalicious.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Pizzalicious.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Pizzalicious/CustomerClient/Controllers/OrderController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Pizzalicious/CustomerClient/Controllers/OrderController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Pizzalicious/CustomerClient/Controllers/SignUpController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Pizzalicious/CustomerClient/Controllers/SignUpController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Pizzalicious/CustomerClient/FXMLUserInterfaces/0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Pizzalicious/CustomerClient/FXMLUserInterfaces/1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Pizzalicious/CustomerClient/FXMLUserInterfaces/2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Pizzalicious/CustomerClient/FXMLUserInterfaces/3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Pizzalicious/CustomerClient/FXMLUserInterfaces/4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Pizzalicious/CustomerClient/FXMLUserInterfaces/5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Pizzalicious/CustomerClient/FXMLUserInterfaces/6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Pizzalicious/CustomerClient/FXMLUserInterfaces/Background-01.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Pizzalicious/CustomerClient/FXMLUserInterfaces/BackgroundBlurred.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Pizzalicious/CustomerClient/FXMLUserInterfaces/OrderPizza.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Pizzalicious/CustomerClient/FXMLUserInterfaces/OrderPizza.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Pizzalicious/CustomerClient/FXMLUserInterfaces/OrderPizzaStyles.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Pizzalicious/CustomerClient/FXMLUserInterfaces/PizzaMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Pizzalicious/CustomerClient/FXMLUserInterfaces/PizzaMenu.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Pizzalicious/CustomerClient/FXMLUserInterfaces/RegistrationClient.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Pizzalicious/CustomerClient/FXMLUserInterfaces/SignIn.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Pizzalicious/CustomerClient/FXMLUserInterfaces/SignIn.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Pizzalicious/CustomerClient/FXMLUserInterfaces/SignUp.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Pizzalicious/CustomerClient/FXMLUserInterfaces/SignUp.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Pizzalicious/CustomerClient/FXMLUserInterfaces/pizzaSlice.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Pizzalicious/CustomerClient/OrderPizzaClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Pizzalicious/CustomerClient/OrderPizzaClient.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Pizzalicious/CustomerClient/SignInClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Pizzalicious/CustomerClient/SignInClient.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Pizzalicious/CustomerClient/SignUpClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Pizzalicious/CustomerClient/SignUpClient.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Pizzalicious/ManagerClient/FXMLUserInterfaces/LoginStaff.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Pizzalicious/ManagerClient/FXMLUserInterfaces/LoginStaff.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Pizzalicious/ManagerClient/FXMLUserInterfaces/RegisterStaff.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Pizzalicious/ManagerClient/FXMLUserInterfaces/RegisterStaff.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Pizzalicious/ManagerClient/FXMLUserInterfaces/crop-pizza-black_23-2147749510.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Pizzalicious/ManagerClient/FXMLUserInterfaces/refresh.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Pizzalicious/ManagerClient/FXMLUserInterfaces/security-icon_248072.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Pizzalicious/ManagerClient/FXMLUserInterfaces/tasty-pepperoni-pizza-black-concrete-background_79782-102.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Pizzalicious/ManagerClient/ManagerOrderClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Pizzalicious/ManagerClient/ManagerOrderClient.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/CustomerClient/Controllers/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CustomerClient/Controllers/OrderController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/CustomerClient/Controllers/SignUpController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CustomerClient/Controllers/SignUpController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CustomerClient/FXMLUserInterfaces/0.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/CustomerClient/FXMLUserInterfaces/Images/0.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CustomerClient/FXMLUserInterfaces/1.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/CustomerClient/FXMLUserInterfaces/Images/1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CustomerClient/FXMLUserInterfaces/2.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/CustomerClient/FXMLUserInterfaces/Images/2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CustomerClient/FXMLUserInterfaces/3.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/CustomerClient/FXMLUserInterfaces/Images/3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CustomerClient/FXMLUserInterfaces/4.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/CustomerClient/FXMLUserInterfaces/Images/4.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CustomerClient/FXMLUserInterfaces/5.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/CustomerClient/FXMLUserInterfaces/Images/5.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CustomerClient/FXMLUserInterfaces/6.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/CustomerClient/FXMLUserInterfaces/Images/6.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CustomerClient/FXMLUserInterfaces/Background-01.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/CustomerClient/FXMLUserInterfaces/Images/Background-01.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CustomerClient/FXMLUserInterfaces/BackgroundBlurred.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/CustomerClient/FXMLUserInterfaces/Images/BackgroundBlurred.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CustomerClient/FXMLUserInterfaces/OrderPizza.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/CustomerClient/FXMLUserInterfaces/OrderPizza.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CustomerClient/FXMLUserInterfaces/OrderPizzaStyles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/CustomerClient/FXMLUserInterfaces/Css/OrderPizzaStyles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CustomerClient/FXMLUserInterfaces/PizzaMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/CustomerClient/FXMLUserInterfaces/PizzaMenu.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CustomerClient/FXMLUserInterfaces/RegistrationClient.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/CustomerClient/FXMLUserInterfaces/Css/RegistrationClient.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CustomerClient/FXMLUserInterfaces/SignIn.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/CustomerClient/FXMLUserInterfaces/SignIn.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CustomerClient/FXMLUserInterfaces/SignUp.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/CustomerClient/FXMLUserInterfaces/SignUp.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CustomerClient/FXMLUserInterfaces/pizzaSlice.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/CustomerClient/FXMLUserInterfaces/Images/pizzaSlice.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CustomerClient/OrderPizzaClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CustomerClient/OrderPizzaClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CustomerClient/SignInClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CustomerClient/SignInClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CustomerClient/SignUpClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CustomerClient/SignUpClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ManagerClient/FXMLUserInterfaces/LoginStaff.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/ManagerClient/FXMLUserInterfaces/LoginStaff.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ManagerClient/FXMLUserInterfaces/RegisterStaff.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/ManagerClient/FXMLUserInterfaces/RegisterStaff.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ManagerClient/FXMLUserInterfaces/crop-pizza-black_23-2147749510.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/ManagerClient/FXMLUserInterfaces/Images/crop-pizza-black_23-2147749510.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ManagerClient/FXMLUserInterfaces/refresh.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/ManagerClient/FXMLUserInterfaces/Images/refresh.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ManagerClient/FXMLUserInterfaces/security-icon_248072.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/ManagerClient/FXMLUserInterfaces/Images/security-icon_248072.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ManagerClient/FXMLUserInterfaces/tasty-pepperoni-pizza-black-concrete-background_79782-102.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/ManagerClient/FXMLUserInterfaces/Images/tasty-pepperoni-pizza-black-concrete-background_79782-102.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ManagerClient/ManagerOrderClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ManagerClient/ManagerOrderClient.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -155,12 +102,13 @@
     <property name="MemberChooser.showClasses" value="true" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="OverrideImplement.combined" value="false" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="dynamic.classpath" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/CustomerClient/FXMLUserInterfaces" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/mysql-connector-java-5.1.48.jar!/" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="recentsLimit" value="5" />
@@ -195,7 +143,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.DashboardClient">
+  <component name="RunManager" selected="Application.OrderPizzaClient">
     <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
       <option name="VMOptions" />
       <option name="arguments" />
@@ -272,6 +220,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Server" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Server.Server" />
+      <module name="Pizzalicious" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Server.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="SignInClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="CustomerClient.SignInClient" />
       <module name="Pizzalicious" />
@@ -339,9 +301,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.SignUpClient" />
+        <item itemvalue="Application.Server" />
         <item itemvalue="Application.DashboardClient" />
         <item itemvalue="Application.ManagerOrderClient" />
-        <item itemvalue="Application.SignUpClient" />
         <item itemvalue="Application.SignInClient" />
       </list>
     </recent_temporary>
@@ -362,7 +325,7 @@
       <workItem from="1574402260995" duration="22526000" />
       <workItem from="1574494070870" duration="51000" />
       <workItem from="1574502453288" duration="17543000" />
-      <workItem from="1574572956387" duration="6131000" />
+      <workItem from="1574572956387" duration="10978000" />
     </task>
     <servers />
   </component>
