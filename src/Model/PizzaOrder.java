@@ -7,6 +7,8 @@ public class PizzaOrder implements Serializable {
     private int orderId;
     private double orderTotalPrice;
     private int orderedBy;
+    private int staffID;
+    private ArrayList<Pizza> orderContent;
 
     public PizzaOrder() {
     }
@@ -39,6 +41,17 @@ public class PizzaOrder implements Serializable {
         return orderedBy;
     }
 
+    @Override
+    public String toString() {
+        return "PizzaOrder{" +
+                "orderId=" + orderId +
+                ", orderTotalPrice=" + orderTotalPrice +
+                ", orderedBy=" + orderedBy +
+                ", staffID=" + staffID +
+                ", orderContent=" + orderContent.toString() +
+                '}';
+    }
+
     public void setOrderedBy(int orderedBy) {
         this.orderedBy = orderedBy;
     }
@@ -58,8 +71,5 @@ public class PizzaOrder implements Serializable {
     public void setOrderContent(ArrayList<Pizza> orderContent) {
         this.orderContent = orderContent;
     }
-
-    private int staffID;
-    private ArrayList<Pizza> orderContent;
 
 }

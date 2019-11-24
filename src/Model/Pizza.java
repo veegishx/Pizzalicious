@@ -6,12 +6,22 @@ public class Pizza implements Serializable {
     private String pizzaType;
     private int pizzaPrice;
     private int pizzaQty;
-    private int pizzaSize;
+    private String pizzaSize;
 
     public Pizza() {
     }
 
-    public Pizza(String pizzaType, int pizzaPrice, int pizzaQty, int pizzaSize) {
+    @Override
+    public String toString() {
+        return "Pizza{" +
+                "pizzaType='" + pizzaType + '\'' +
+                ", pizzaPrice=" + pizzaPrice +
+                ", pizzaQty=" + pizzaQty +
+                ", pizzaSize='" + pizzaSize + '\'' +
+                '}';
+    }
+
+    public Pizza(String pizzaType, int pizzaPrice, int pizzaQty, String pizzaSize) {
         this.pizzaType = pizzaType;
         this.pizzaPrice = pizzaPrice;
         this.pizzaQty = pizzaQty;
@@ -42,11 +52,11 @@ public class Pizza implements Serializable {
         this.pizzaQty = pizzaQty;
     }
 
-    public int getPizzaSize() {
+    public String getPizzaSize() {
         return pizzaSize;
     }
 
-    public void setPizzaSize(int pizzaSize) {
+    public void setPizzaSize(String pizzaSize) {
         this.pizzaSize = pizzaSize;
     }
 }

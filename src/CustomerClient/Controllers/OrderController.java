@@ -1,5 +1,7 @@
 package CustomerClient.Controllers;
 
+import Model.Pizza;
+import Model.PizzaOrder;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -20,6 +22,8 @@ import javafx.scene.image.ImageView;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.Random;
 import java.util.ResourceBundle;
 public class OrderController implements Initializable {
     @FXML private ComboBox<String> orderTypeDropdown;
@@ -29,6 +33,9 @@ public class OrderController implements Initializable {
     @FXML private Label itemsInOrderQueue;
     @FXML private Label itemsInOrderTotal;
     int totalOrderPice = 0;
+    PizzaOrder pizzaOrder = new PizzaOrder();
+    Pizza singlePizzaOrder = new Pizza();
+    ArrayList<Pizza> pizzaArrayList = new ArrayList<Pizza>();
 
     public void initialize(URL location, ResourceBundle resources) {
         orderTypeDropdown.getItems().removeAll(orderTypeDropdown.getItems());
@@ -51,6 +58,7 @@ public class OrderController implements Initializable {
     }
 
     public void updateOrder() throws FileNotFoundException {
+        int pizzaPice = 0;
         // Get order values
         String orderSize =  orderSizeDropdown.getValue();
         int orderQuantity =  Integer.parseInt(orderQuantityTxt.getText());
@@ -73,12 +81,15 @@ public class OrderController implements Initializable {
                 switch (orderSize) {
                     case "Regular":
                         totalOrderPice += orderQuantity * 199;
+                        pizzaPice = 199;
                         break;
                     case "Medium":
                         totalOrderPice += orderQuantity * 299;
+                        pizzaPice = 299;
                         break;
                     case "Large":
                         totalOrderPice += orderQuantity * 399;
+                        pizzaPice = 399;
                         break;
                 }
                 orderListViewThumbnail = new ImageView(new Image("CustomerClient/FXMLUserInterfaces/Images/4.png"));
@@ -87,12 +98,15 @@ public class OrderController implements Initializable {
                 switch (orderSize) {
                     case "Regular":
                         totalOrderPice += orderQuantity * 249;
+                        pizzaPice = 249;
                         break;
                     case "Medium":
                         totalOrderPice += orderQuantity * 349;
+                        pizzaPice = 349;
                         break;
                     case "Large":
                         totalOrderPice += orderQuantity * 449;
+                        pizzaPice = 449;
                         break;
                 }
                 orderListViewThumbnail = new ImageView(new Image("CustomerClient/FXMLUserInterfaces/Images/6.png"));
@@ -101,12 +115,15 @@ public class OrderController implements Initializable {
                 switch (orderSize) {
                     case "Regular":
                         totalOrderPice += orderQuantity * 149;
+                        pizzaPice = 149;
                         break;
                     case "Medium":
                         totalOrderPice += orderQuantity * 249;
+                        pizzaPice = 249;
                         break;
                     case "Large":
                         totalOrderPice += orderQuantity * 349;
+                        pizzaPice = 349;
                         break;
                 }
                 orderListViewThumbnail = new ImageView(new Image("CustomerClient/FXMLUserInterfaces/Images/3.png"));
@@ -115,17 +132,25 @@ public class OrderController implements Initializable {
                 switch (orderSize) {
                     case "Regular":
                         totalOrderPice += orderQuantity * 139;
+                        pizzaPice = 139;
                         break;
                     case "Medium":
                         totalOrderPice += orderQuantity * 239;
+                        pizzaPice = 239;
                         break;
                     case "Large":
                         totalOrderPice += orderQuantity * 339;
+                        pizzaPice = 339;
                         break;
                 }
                 orderListViewThumbnail = new ImageView(new Image("CustomerClient/FXMLUserInterfaces/Images/5.png"));
                 break;
         }
+
+        // Create a Pizza Object
+        singlePizzaOrder = new Pizza(orderType, pizzaPice, orderQuantity, orderSize);
+        pizzaArrayList.add(singlePizzaOrder);
+        pizzaOrder = new PizzaOrder(1, totalOrderPice, 1, 1, pizzaArrayList);
 
         orderListViewNo.setTextFill(Color.web("#FFFFFF"));
         orderListViewNo.setFont(new Font("Dubai", 14));
@@ -157,7 +182,7 @@ public class OrderController implements Initializable {
     }
 
     public void confirmOrderList() {
-
+        System.out.println(pizzaOrder.toString());
     }
 
 }
