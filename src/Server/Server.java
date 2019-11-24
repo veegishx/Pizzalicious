@@ -17,7 +17,6 @@ public class Server implements Runnable {
     public static Socket connetionSocket;
     public static ObjectOutputStream outToClient;
     public static ObjectInputStream inFromClient;
-
     public void run() {
 
         try {
@@ -152,7 +151,7 @@ public class Server implements Runnable {
                                 PreparedStatement preparedStmt = conn.prepareStatement(query);
                                 preparedStmt.setDouble(1,orderTotalPrice );
                                 preparedStmt.setInt(2,orderedBy);
-                                preparedStmt.setString(3, pizzaContent);
+                                preparedStmt.setObject(3, pizzaContent);
                                 preparedStmt.setInt(4, staffID);
 
                                 // execute the preparedstatement
@@ -249,6 +248,51 @@ public class Server implements Runnable {
                                 System.err.println(e.getMessage());
                             }// try for database
 
+                            break;
+                        case "read_orders":
+                            try {
+                                // create a mysql database connection
+                                String myDriver = "org.gjt.mm.mysql.Driver";
+                                String myUrl = "jdbc:mysql://localhost:3306/Pizzalicious";
+                                Class.forName(myDriver);
+                                Connection conn = DriverManager.getConnection(myUrl, "root", "");
+
+                                // create a sql date object so we can use it in our INSERT statement
+
+                                // the mysql insert statement
+                                String query = " SELECT * FROM pizzaorder";
+
+                                // create the mysql insert preparedstatement
+                                PreparedStatement preparedStmt = conn.prepareStatement(query);
+
+                                ResultSet resultSet = preparedStmt.executeQuery();
+                                int orderIdResult, orderByResult, staffId;
+                                double orderTotalPriceResult ;
+                                Object orderObject;
+                                ArrayList<PizzaOrder> results = new ArrayList<PizzaOrder>();
+                                PizzaOrder order;
+                                while (resultSet.next()) {
+                                    orderIdResult = resultSet.getInt("orderId");
+                                    orderTotalPriceResult = resultSet.getDouble("orderTotalPrice");
+                                    orderByResult = resultSet.getInt("orderBy");
+                                    orderObject = resultSet.getObject(4);
+                                    staffId = resultSet.getInt("staffId");
+                                    order = new PizzaOrder(orderIdResult, orderTotalPriceResult, staffId, orderByResult, orderObject);
+                                    results.add(order);
+                                }
+
+                                outToClient.writeObject(results);
+                                outToClient.flush();
+
+                                System.out.println(results.size());
+
+                                outToClient.writeUTF("orders_ok");
+                                outToClient.flush();
+                                conn.close();
+                            } catch (Exception e) {
+                                System.err.println("Got an exception!");
+                                System.err.println(e.getMessage());
+                            }// try for database
                             break;
 
                     }// switch

@@ -9,6 +9,7 @@ public class PizzaOrder implements Serializable {
     private int orderedBy;
     private int staffID;
     private ArrayList<Pizza> orderContent;
+    private Object pizza;
 
     public PizzaOrder() {
     }
@@ -19,6 +20,14 @@ public class PizzaOrder implements Serializable {
         this.orderedBy = orderedBy;
         this.staffID = staffID;
         this.orderContent = orderContent;
+    }
+
+    public PizzaOrder(int orderId, double orderTotalPrice, int orderedBy, int staffID, Object pizza) {
+        this.orderId = orderId;
+        this.orderTotalPrice = orderTotalPrice;
+        this.orderedBy = orderedBy;
+        this.staffID = staffID;
+        this.pizza = pizza;
     }
 
     public int getOrderId() {

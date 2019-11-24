@@ -1,6 +1,4 @@
-package CustomerClient.Controllers;
-
-import Model.User;
+package Model;
 
 public class Context {
     private final static Context instance = new Context();

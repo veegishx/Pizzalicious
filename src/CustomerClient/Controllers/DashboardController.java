@@ -1,5 +1,6 @@
 package CustomerClient.Controllers;
 
+import Model.Context;
 import javafx.animation.FadeTransition;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -8,7 +9,6 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 
@@ -16,8 +16,6 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.Calendar;
 import java.util.ResourceBundle;
-import java.util.prefs.BackingStoreException;
-import java.util.prefs.Preferences;
 
 public class DashboardController implements Initializable {
     @FXML private AnchorPane pizzaOfTheDayPane;
