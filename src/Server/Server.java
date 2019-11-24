@@ -165,7 +165,91 @@ public class Server implements Runnable {
                             }// try for database
 
                             break;//order create
-                        case "order_read":
+                        case "staff_signin":
+                            //System.out.println("ok");
+                            String staff_signInInfo = (String) inFromClient.readUTF();
+                            String [] staff_signInInfoArray = staff_signInInfo.split("\t");
+                            String staff_signInEmail = staff_signInInfoArray[0];
+                            String staff_signInPassword = staff_signInInfoArray[1];
+                            //System.out.println(signInEmail + " " + signInPassword);
+                            try {
+                                // create a mysql database connection
+                                String myDriver = "org.gjt.mm.mysql.Driver";
+                                String myUrl = "jdbc:mysql://localhost:3306/Pizzalicious";
+                                Class.forName(myDriver);
+                                Connection conn = DriverManager.getConnection(myUrl, "root", "");
+
+                                // create a sql date object so we can use it in our INSERT statement
+
+                                // the mysql insert statement
+                                String query = "SELECT count(email) AS n FROM staff WHERE email=? AND password=?";
+
+                                // create the mysql insert preparedstatement
+                                PreparedStatement preparedStmt = conn.prepareStatement(query);
+                                preparedStmt.setString(1, staff_signInEmail);
+                                preparedStmt.setString(2, staff_signInPassword);
+
+                                // execute the preparedstatement
+
+
+                                ResultSet RS = preparedStmt.executeQuery();
+                                RS.next();
+                                String countN = RS.getString("n");
+                                int n = parseInt(countN);
+                                if (n == 1){
+                                    //System.out.println("signed in");
+                                    outToClient.writeUTF("staff_sign_in_ok");
+                                    outToClient.flush();
+                                } else {
+                                    outToClient.writeUTF("staff_sign_in_failure");
+                                    outToClient.flush();
+                                    //System.out.println("sign in failed");
+                                }
+
+                                conn.close();
+                            } catch (Exception e) {
+                                System.err.println("Got an exception!");
+                                System.err.println(e.getMessage());
+                            }// try for database
+                            break;
+                        case "staff_registration":
+
+                            Staff staffRegistration = (Staff) inFromClient.readObject();
+                            String staffRegistration_Email = staffRegistration.getEmail();
+                            String staffRegistration_FirstName = staffRegistration.getFirstName();
+                            String staffRegistration_LastName = staffRegistration.getLastName();
+                            String staffRegistration_Password = staffRegistration.getPassword();
+                            try {
+                                // create a mysql database connection
+                                String myDriver = "org.gjt.mm.mysql.Driver";
+                                String myUrl = "jdbc:mysql://localhost:3306/Pizzalicious";
+                                Class.forName(myDriver);
+                                Connection conn = DriverManager.getConnection(myUrl, "root", "");
+
+                                // create a sql date object so we can use it in our INSERT statement
+
+                                // the mysql insert statement
+                                String query = " insert into staff (firstName, lastName, email, password)"
+                                        + " values (?, ?, ?, ?)";
+
+                                // create the mysql insert preparedstatement
+                                PreparedStatement preparedStmt = conn.prepareStatement(query);
+                                preparedStmt.setString(1, staffRegistration_FirstName);
+                                preparedStmt.setString(2, staffRegistration_LastName);
+                                preparedStmt.setString(3, staffRegistration_Email);
+                                preparedStmt.setString(4, staffRegistration_Password);
+
+                                // execute the preparedstatement
+                                preparedStmt.execute();
+                                outToClient.writeUTF("staff_registration_ok");
+                                outToClient.flush();
+                                conn.close();
+                            } catch (Exception e) {
+                                System.err.println("Got an exception!");
+                                System.err.println(e.getMessage());
+                            }// try for database
+
+                            break;
 
                     }// switch
                 } catch (IOException i) {

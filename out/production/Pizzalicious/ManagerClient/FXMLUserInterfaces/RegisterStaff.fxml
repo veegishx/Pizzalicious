@@ -10,7 +10,7 @@
 <?import javafx.scene.text.Font?>
 
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="585.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane fx:id="registerStaffPane" fx:controller="ManagerClient.Controllers.RegisterStaffController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="585.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <ImageView fitHeight="400.0" fitWidth="641.0" layoutX="-8.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -42,19 +42,19 @@
             <Font name="Dubai Bold" size="12.0" />
          </font>
       </Label>
-      <TextField layoutX="22.0" layoutY="119.0" promptText="John" />
-      <TextField layoutX="198.0" layoutY="119.0" promptText="Doe" />
+      <TextField fx:id="staffRegistrationFName" layoutX="22.0" layoutY="119.0" promptText="John" />
+      <TextField fx:id="staffRegistrationLName" layoutX="198.0" layoutY="119.0" promptText="Doe" />
       <Label layoutX="20.0" layoutY="170.0" text="EMPLOYEE EMAIL" textFill="WHITE">
          <font>
             <Font name="Dubai Bold" size="12.0" />
          </font>
       </Label>
-      <TextField layoutX="21.0" layoutY="200.0" prefHeight="26.0" prefWidth="152.0" promptText="john.doe@pizzalicious.com">
+      <TextField fx:id="staffRegistrationEmail" layoutX="21.0" layoutY="200.0" prefHeight="26.0" prefWidth="152.0" promptText="john.doe@pizzalicious.com">
          <font>
             <Font size="10.0" />
          </font>
       </TextField>
-      <PasswordField layoutX="200.0" layoutY="200.0" promptText="*************" />
+      <PasswordField fx:id="staffRegistrationPassword" layoutX="200.0" layoutY="200.0" promptText="*************" />
       <Label layoutX="199.0" layoutY="170.0" text="PASSWORD" textFill="WHITE">
          <font>
             <Font name="Dubai Bold" size="12.0" />
@@ -65,6 +65,6 @@
             <Font size="10.0" />
          </font>
       </Label>
-      <Button layoutX="18.0" layoutY="309.0" mnemonicParsing="false" style="-fx-border-radius: 0; -fx-background-color: #0099ff;" text="CREATE ACCOUNT" />
+      <Button onAction="#staffRegistration" layoutX="18.0" layoutY="309.0" mnemonicParsing="false" style="-fx-border-radius: 0; -fx-background-color: #0099ff;" text="CREATE ACCOUNT" />
    </children>
 </AnchorPane>
