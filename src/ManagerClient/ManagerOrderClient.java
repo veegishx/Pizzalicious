@@ -9,7 +9,7 @@ import javafx.stage.Stage;
 public class ManagerOrderClient extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("FXMLUserInterfaces/LoginStaff.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("FXMLUserInterfaces/ManageOrdersDashboard.fxml"));
         primaryStage.setTitle("Pizza Menu");
         primaryStage.setScene(new Scene(root, 590, 400)); // Size for Registration & login stage
         primaryStage.setResizable(false);

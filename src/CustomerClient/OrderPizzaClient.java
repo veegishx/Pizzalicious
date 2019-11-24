@@ -15,7 +15,7 @@ public class OrderPizzaClient extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("FXMLUserInterfaces/OrderPizza.fxml"));
-        primaryStage.setTitle("Pizza Menu");
+        primaryStage.setTitle("Order Pizza");
         primaryStage.setScene(new Scene(root));
         primaryStage.setMaximized(true);
         primaryStage.show();

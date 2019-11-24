@@ -17,7 +17,6 @@ import javafx.stage.Stage;
 
 import javafx.scene.image.ImageView;
 
-import javax.swing.*;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.URL;
@@ -65,16 +64,16 @@ public class OrderController implements Initializable {
         ImageView orderListViewThumbnail;
         switch (orderType) {
             case "Hawaiian Craze":
-                orderListViewThumbnail = new ImageView(new Image("CustomerClient/FXMLUserInterfaces/4.png"));
+                orderListViewThumbnail = new ImageView(new Image("CustomerClient/FXMLUserInterfaces/Images/4.png"));
                 break;
             case "Spicy Bacon Deluxe":
-                orderListViewThumbnail = new ImageView(new Image("CustomerClient/FXMLUserInterfaces/6.png"));
+                orderListViewThumbnail = new ImageView(new Image("CustomerClient/FXMLUserInterfaces/Images/6.png"));
                 break;
             case "Spicy 3 Cheese":
-                orderListViewThumbnail = new ImageView(new Image("CustomerClient/FXMLUserInterfaces/3.png"));
+                orderListViewThumbnail = new ImageView(new Image("CustomerClient/FXMLUserInterfaces/Images/3.png"));
                 break;
             default:
-                orderListViewThumbnail = new ImageView(new Image("CustomerClient/FXMLUserInterfaces/5.png"));
+                orderListViewThumbnail = new ImageView(new Image("CustomerClient/FXMLUserInterfaces/Images/5.png"));
                 break;
         }
 

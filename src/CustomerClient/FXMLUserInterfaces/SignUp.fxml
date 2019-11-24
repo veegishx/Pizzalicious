@@ -19,22 +19,22 @@
    <children>
       <ImageView fitHeight="882.0" fitWidth="1556.0" layoutX="-89.0" layoutY="-15.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@BackgroundBlurred.png" />
+            <Image url="@Images/BackgroundBlurred.png" />
          </image>
       </ImageView>
       <AnchorPane layoutX="430.0" layoutY="167.0" prefHeight="477.0" prefWidth="520.0" style="-fx-background-radius: 8px; -fx-background-color: #1d2021;">
          <children>
-            <TextField fx:id="signUpEmail" layoutX="38.0" layoutY="132.0" prefHeight="30.0" prefWidth="187.0" promptText="Enter Your Email" stylesheets="@RegistrationClient.css">
+            <TextField fx:id="signUpEmail" layoutX="38.0" layoutY="132.0" prefHeight="30.0" prefWidth="187.0" promptText="Enter Your Email" stylesheets="@Css/RegistrationClient.css">
                <font>
                   <Font name="Segoe UI" size="14.0" />
                </font>
             </TextField>
-            <PasswordField fx:id="signUpPassword" layoutX="281.0" layoutY="131.0" prefHeight="30.0" prefWidth="187.0" promptText="Enter Your Password" stylesheets="@RegistrationClient.css">
+            <PasswordField fx:id="signUpPassword" layoutX="281.0" layoutY="131.0" prefHeight="30.0" prefWidth="187.0" promptText="Enter Your Password" stylesheets="@Css/RegistrationClient.css">
                <font>
                   <Font name="Segoe UI" size="14.0" />
                </font>
             </PasswordField>
-            <TextField fx:id="signUpAddress" layoutX="40.0" layoutY="213.0" prefHeight="30.0" prefWidth="426.0" promptText="Enter Your Residential Address" stylesheets="@RegistrationClient.css">
+            <TextField fx:id="signUpAddress" layoutX="40.0" layoutY="213.0" prefHeight="30.0" prefWidth="426.0" promptText="Enter Your Residential Address" stylesheets="@Css/RegistrationClient.css">
                <font>
                   <Font name="Segoe UI" size="14.0" />
                </font></TextField>
@@ -53,7 +53,7 @@
                   <Font name="Segoe UI Bold" size="14.0" />
                </font>
             </Label>
-            <TextField fx:id="signUpFname" layoutX="38.0" layoutY="57.0" prefHeight="30.0" prefWidth="187.0" promptText="Enter Your First Name" stylesheets="@RegistrationClient.css">
+            <TextField fx:id="signUpFname" layoutX="38.0" layoutY="57.0" prefHeight="30.0" prefWidth="187.0" promptText="Enter Your First Name" stylesheets="@Css/RegistrationClient.css">
                <font>
                   <Font name="Segoe UI" size="14.0" />
                </font>
@@ -68,7 +68,7 @@
                   <Font name="Segoe UI Bold" size="14.0" />
                </font>
             </Label>
-            <TextField fx:id="signUpPhone" layoutX="40.0" layoutY="291.0" prefHeight="30.0" prefWidth="205.0" promptText="Enter Your Phone Number" stylesheets="@RegistrationClient.css">
+            <TextField fx:id="signUpPhone" layoutX="40.0" layoutY="291.0" prefHeight="30.0" prefWidth="205.0" promptText="Enter Your Phone Number" stylesheets="@Css/RegistrationClient.css">
                <font>
                   <Font name="Segoe UI" size="14.0" />
                </font></TextField>
@@ -77,7 +77,7 @@
                   <Font name="Segoe UI Bold" size="14.0" />
                </font>
             </Label>
-            <Label layoutX="264.0" layoutY="264.0" prefHeight="64.0" prefWidth="205.0" stylesheets="@RegistrationClient.css" text="We ask for your phone number so that we can contact you for the pick-up point of your delivery." textFill="WHITE" wrapText="true">
+            <Label layoutX="264.0" layoutY="264.0" prefHeight="64.0" prefWidth="205.0" stylesheets="@Css/RegistrationClient.css" text="We ask for your phone number so that we can contact you for the pick-up point of your delivery." textFill="WHITE" wrapText="true">
                <font>
                   <Font name="Segoe UI" size="12.0" />
                </font>
@@ -86,14 +86,14 @@
                <font>
                   <Font name="Segoe UI Bold" size="12.0" />
                </font></CheckBox>
-            <Button fx:id="signUpBtn" layoutX="37.0" layoutY="402.0" mnemonicParsing="false" onAction="#customerSignUp" prefHeight="32.0" prefWidth="111.0" style="-fx-background-color: #00aaff; -fx-background-radius: 0;" stylesheets="@RegistrationClient.css" text="SIGN UP" textFill="WHITE">
+            <Button fx:id="signUpBtn" layoutX="37.0" layoutY="402.0" mnemonicParsing="false" onAction="#customerSignUp" prefHeight="32.0" prefWidth="111.0" style="-fx-background-color: #00aaff; -fx-background-radius: 0;" stylesheets="@Css/RegistrationClient.css" text="SIGN UP" textFill="WHITE">
                <font>
                   <Font name="Segoe UI Bold" size="12.0" />
                </font></Button>
             <Hyperlink fx:id="tosLink" layoutX="225.0" layoutY="350.0" onAction="#showTos" text="Terms of Use" />
             <Label layoutX="303.0" layoutY="353.0" text="and" textFill="WHITE" />
             <Hyperlink fx:id="policyLink" layoutX="325.0" layoutY="350.0" onAction="#showPolicy" text="Privacy Policy" />
-            <TextField fx:id="signUpLname" layoutX="280.0" layoutY="57.0" prefHeight="30.0" prefWidth="187.0" promptText="Enter Your First Name" stylesheets="@RegistrationClient.css">
+            <TextField fx:id="signUpLname" layoutX="280.0" layoutY="57.0" prefHeight="30.0" prefWidth="187.0" promptText="Enter Your First Name" stylesheets="@Css/RegistrationClient.css">
                <font>
                   <Font name="Segoe UI" size="14.0" />
                </font>
@@ -123,7 +123,7 @@
             </RadialGradient>
          </stroke>
       </Line>
-      <Label layoutX="520.0" layoutY="77.0" prefHeight="70.0" prefWidth="340.0" stylesheets="@RegistrationClient.css" text="Welcome to Pizzalicious Online Ordering System. Please create an account to benefit from the comfort of ordering pizza without needing to go out." textAlignment="CENTER" textFill="WHITE" wrapText="true">
+      <Label layoutX="520.0" layoutY="77.0" prefHeight="70.0" prefWidth="340.0" stylesheets="@Css/RegistrationClient.css" text="Welcome to Pizzalicious Online Ordering System. Please create an account to benefit from the comfort of ordering pizza without needing to go out." textAlignment="CENTER" textFill="WHITE" wrapText="true">
          <font>
             <Font name="Segoe UI" size="12.0" />
          </font>

@@ -1,0 +1,17 @@
+.anchor {
+    -fx-background-image:url('../Images/papyrus-dark.png');
+}
+
+.anchor-profile {
+    -fx-background-image:url('../Images/beanstalk-dark.png');
+}
+
+.anchor-pizza{
+    -fx-background-image:url('../Images/what-the-hex-dark.png');
+}
+
+.anchor-order{
+    -fx-background-image:url('../Images/memphis-mini-dark.png');
+}
+
+

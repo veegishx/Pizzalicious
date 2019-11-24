@@ -29,17 +29,17 @@
             </Label>
             <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="108.0" layoutY="204.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@4.png" />
+                  <Image url="@Images/4.png" />
                </image>
             </ImageView>
             <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="408.0" layoutY="204.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@6.png" />
+                  <Image url="@Images/6.png" />
                </image>
             </ImageView>
             <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="699.0" layoutY="204.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@3.png" />
+                  <Image url="@Images/3.png" />
                </image>
             </ImageView>
             <Label layoutX="108.0" layoutY="353.0" prefHeight="98.0" prefWidth="201.0" text="Enjoy our fresh hawaiian style pizza baked with savoury incredients from the local market" textFill="WHITE" wrapText="true">
@@ -64,7 +64,7 @@
             </Label>
             <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="1002.0" layoutY="204.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@5.png" />
+                  <Image url="@Images/5.png" />
                </image>
             </ImageView>
             <Label layoutX="1002.0" layoutY="353.0" prefHeight="98.0" prefWidth="213.0" text="This blend of mushrooms and peppers sprinkled on a light dough will make you want to lick your fingers" textFill="WHITE" wrapText="true">
@@ -264,7 +264,7 @@
             </Button>
             <ImageView fitHeight="89.0" fitWidth="267.0" layoutX="100.0" layoutY="30.0" pickOnBounds="true">
                <image>
-                  <Image url="@0.png" />
+                  <Image url="@Images/0.png" />
                </image>
             </ImageView>
          </children>

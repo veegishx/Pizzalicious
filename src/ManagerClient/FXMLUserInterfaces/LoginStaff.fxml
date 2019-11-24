@@ -14,7 +14,7 @@
    <children>
       <ImageView fitHeight="400.0" fitWidth="641.0" layoutX="-8.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@crop-pizza-black_23-2147749510.jpg" />
+            <Image url="@Images/crop-pizza-black_23-2147749510.jpg" />
          </image>
       </ImageView>
       <Label layoutX="67.0" layoutY="11.0" text="Pizzalicious" textFill="WHITE">
@@ -29,7 +29,7 @@
       </Label>
       <ImageView fitHeight="32.0" fitWidth="42.0" layoutX="18.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@security-icon_248072.png" />
+            <Image url="@Images/security-icon_248072.png" />
          </image>
       </ImageView>
       <Label layoutX="220.0" layoutY="111.0" text="EMPLOYEE EMAIL" textFill="WHITE">

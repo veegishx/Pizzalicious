@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="335.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CustomerClient.Controllers.DashboardController">
+  <children>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="800.0" prefWidth="1387.0" style="-fx-background-color: #1d2021;" VBox.vgrow="ALWAYS">
+         <children>
+            <ImageView fitHeight="898.0" fitWidth="1461.0" layoutX="-18.0" layoutY="-94.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Images/BackgroundBlurred.png" />
+               </image>
+            </ImageView>
+            <AnchorPane fx:id="ordersPane" layoutX="1001.0" layoutY="290.0" prefHeight="324.0" prefWidth="296.0" styleClass="anchor" stylesheets="@Css/Dashboard.css">
+               <effect>
+                  <DropShadow />
+               </effect>
+               <children>
+                  <Label fx:id="ordersDateLabel" layoutX="22.0" layoutY="23.0" text="10 DECEMBER 2019" textFill="#5d6a9c" />
+                  <Label layoutX="23.0" layoutY="41.0" prefHeight="57.0" prefWidth="267.0" text="You currently have no pending orders" textFill="WHITE" wrapText="true">
+                     <font>
+                        <Font name="Segoe UI" size="18.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="71.0" layoutY="73.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/pizzaSlice.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="viewOrdersBtn" layoutX="30.0" layoutY="232.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="235.0" style="-fx-background-color: #00aaff; -fx-background-radius: 0;" text="VIEW ORDERS" textFill="WHITE">
+                     <font>
+                        <Font name="Segoe UI Bold" size="18.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="1001.0" layoutY="160.0" prefHeight="127.0" prefWidth="295.0" styleClass="anchor-profile" stylesheets="@Css/Dashboard.css">
+               <effect>
+                  <DropShadow />
+               </effect>
+               <children>
+                  <ImageView fitHeight="60.0" fitWidth="65.0" layoutX="19.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/cute-round-avatar-png-drawing-doodle-clipart-09d35cae9b3a9087.png" />
+                     </image>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </ImageView>
+                  <Label fx:id="nameLabel" layoutX="97.0" layoutY="40.0" text="Veegish Ramdani" textFill="WHITE">
+                     <font>
+                        <Font name="Segoe UI Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="97.0" layoutY="23.0" text="LOGGED IN AS" textFill="WHITE" />
+                  <Button fx:id="viewProfileBtn" layoutX="97.0" layoutY="68.0" mnemonicParsing="false" style="-fx-background-color: #00aaff; -fx-background-radius: 0;" text="VIEW PROFILE" textFill="WHITE" />
+               </children>
+            </AnchorPane>
+            <Label layoutX="62.0" layoutY="43.0" text="Pizzalicious " textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI Bold" size="34.0" />
+               </font>
+            </Label>
+            <Label layoutX="64.0" layoutY="88.0" text="CUSTOMER DASHBOARD" textFill="#4ebeff" />
+            <AnchorPane fx:id="pizzaOfTheDayPane" layoutX="43.0" layoutY="160.0" prefHeight="299.0" prefWidth="498.0" styleClass="anchor-pizza" stylesheets="@Css/Dashboard.css">
+               <effect>
+                  <DropShadow />
+               </effect>
+               <children>
+                  <ImageView fx:id="pizzaOfTheDayImg" fitHeight="150.0" fitWidth="165.0" layoutX="45.0" layoutY="112.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/1.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="154.0" layoutY="33.0" text="Pizza of The Day" textFill="WHITE">
+                     <font>
+                        <Font name="Segoe Print Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="pizzaOfTheDayName" layoutX="244.0" layoutY="102.0" prefHeight="154.0" prefWidth="207.0" text="Mushroom Cream Light" textFill="WHITE" wrapText="true">
+                     <font>
+                        <Font name="Segoe UI Bold" size="36.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="42.0" layoutY="471.0" prefHeight="144.0" prefWidth="499.0" styleClass="anchor-pizza" stylesheets="@Css/Dashboard.css">
+               <effect>
+                  <DropShadow />
+               </effect>
+               <children>
+                  <Label layoutX="33.0" layoutY="34.0" prefHeight="75.0" prefWidth="282.0" text="Like what you see? Check out our Menu to discover more!" textFill="WHITE" wrapText="true">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="viewMenuBtn" layoutX="324.0" layoutY="52.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="153.0" style="-fx-background-color: #00aaff; -fx-background-radius: 0;" text="VIEW MENU" textFill="WHITE">
+                     <font>
+                        <Font name="Segoe UI Bold" size="18.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="placeOrderPane" layoutX="563.0" layoutY="159.0" prefHeight="457.0" prefWidth="416.0" styleClass="anchor-order" stylesheets="@Css/Dashboard.css">
+               <effect>
+                  <DropShadow />
+               </effect>
+               <children>
+                  <Label layoutX="42.0" layoutY="38.0" text="Feelin' Hungry?" textFill="WHITE">
+                     <font>
+                        <Font name="Segoe UI Bold" size="36.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="45.0" layoutY="83.0" text="Then stop waiting and place your order!" textFill="WHITE">
+                     <font>
+                        <Font name="Segoe UI" size="14.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="placeOrder" layoutX="43.0" layoutY="363.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="335.0" style="-fx-background-color: red; -fx-background-radius: 0;" text="PLACE ORDER" textFill="WHITE">
+                     <font>
+                        <Font name="Segoe UI Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <ImageView fitHeight="200.0" fitWidth="245.0" layoutX="115.0" layoutY="126.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/delivery-icon.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </children>
+    </AnchorPane>
+  </children>
+</VBox>

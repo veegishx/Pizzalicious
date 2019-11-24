@@ -15,7 +15,7 @@ public class SignInClient extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("FXMLUserInterfaces/SignIn.fxml"));
-        primaryStage.setTitle("Pizza Menu");
+        primaryStage.setTitle("Customer Sign In");
         primaryStage.setScene(new Scene(root));
         primaryStage.setMaximized(true);
         primaryStage.show();

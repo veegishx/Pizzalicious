@@ -29,9 +29,9 @@
                </font></Button>
             <Pane layoutX="34.0" layoutY="187.0" prefHeight="112.0" prefWidth="756.0" style="-fx-background-color: #202124;">
                <children>
-                  <ComboBox fx:id="orderTypeDropdown" layoutX="24.0" layoutY="56.0" prefHeight="29.0" prefWidth="162.0" promptText="Choose Pizza Type" stylesheets="@OrderPizzaStyles.css" />
-                  <ComboBox fx:id="orderSizeDropdown" layoutX="219.0" layoutY="56.0" prefHeight="29.0" prefWidth="162.0" promptText="Choose Pizza Size" style="-fx-border-radius: 0;" stylesheets="@OrderPizzaStyles.css" />
-                  <TextField fx:id="orderQuantityTxt" layoutX="411.0" layoutY="54.0" prefHeight="32.0" prefWidth="152.0" promptText="Enter Order Quantity" styleClass="text-field" stylesheets="@OrderPizzaStyles.css" />
+                  <ComboBox fx:id="orderTypeDropdown" layoutX="24.0" layoutY="56.0" prefHeight="29.0" prefWidth="162.0" promptText="Choose Pizza Type" stylesheets="@Css/OrderPizzaStyles.css" />
+                  <ComboBox fx:id="orderSizeDropdown" layoutX="219.0" layoutY="56.0" prefHeight="29.0" prefWidth="162.0" promptText="Choose Pizza Size" style="-fx-border-radius: 0;" stylesheets="@Css/OrderPizzaStyles.css" />
+                  <TextField fx:id="orderQuantityTxt" layoutX="411.0" layoutY="54.0" prefHeight="32.0" prefWidth="152.0" promptText="Enter Order Quantity" styleClass="text-field" stylesheets="@Css/OrderPizzaStyles.css" />
                   <Label layoutX="24.0" layoutY="14.0" text="Type" textFill="WHITE">
                      <font>
                         <Font name="Dubai Bold" size="18.0" />
@@ -54,7 +54,7 @@
                   </Button>
                </children>
             </Pane>
-            <ListView fx:id="ordersListView" layoutX="34.0" layoutY="324.0" prefHeight="297.0" prefWidth="756.0" style="-fx-background-color: #202124;" styleClass="ordersList" stylesheets="@OrderPizzaStyles.css" />
+            <ListView fx:id="ordersListView" layoutX="34.0" layoutY="324.0" prefHeight="297.0" prefWidth="756.0" style="-fx-background-color: #202124;" styleClass="ordersList" stylesheets="@Css/OrderPizzaStyles.css" />
             <Label layoutX="32.0" layoutY="630.0" text="Items in order queue:" textFill="WHITE">
                <font>
                   <Font name="Ebrima" size="18.0" />
