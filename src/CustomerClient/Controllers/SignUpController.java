@@ -5,14 +5,13 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
-
 import java.io.IOException;
 import java.net.URL;
 import java.util.Optional;
 import java.util.ResourceBundle;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
 import java.io.*;
 import java.net.Socket;
 import java.net.UnknownHostException;
@@ -53,6 +52,7 @@ public class SignUpController implements Initializable {
         }
     }
 
+
     public void customerSignUp() throws IOException {
         connect();
         String email = signUpEmail.getText();
@@ -70,11 +70,21 @@ public class SignUpController implements Initializable {
         objOutStream.writeObject(U1);
         objOutStream.flush();
 
-        Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setTitle("Pizzalicious User Sign Up Status");
-        alert.setHeaderText("Account Successfully Created");
-        alert.setContentText("You can now Sign in. Press OK to continue");
-        Optional<ButtonType> result = alert.showAndWait();
+        String svrStatus = (String) objInStream.readUTF();
+        if (svrStatus.equals("sign_up_ok")){
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Pizzalicious User Sign Up Status");
+            alert.setHeaderText("Account Successfully Created");
+            alert.setContentText("You can now Sign in. Press OK to continue");
+            Optional<ButtonType> result = alert.showAndWait();
+            showLoginForm();
+        } else {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Pizzalicious User Sign Up Status");
+            alert.setHeaderText("Account Creation failed.");
+            alert.setContentText("Please try. Press OK to continue");
+            Optional<ButtonType> result = alert.showAndWait();
+        }
     }
 
     public void showTos() throws IOException {

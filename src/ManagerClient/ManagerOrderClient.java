@@ -11,7 +11,7 @@ public class ManagerOrderClient extends Application {
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("FXMLUserInterfaces/ManageOrdersDashboard.fxml"));
         primaryStage.setTitle("Pizza Menu");
-        primaryStage.setScene(new Scene(root, 590, 400)); // Size for Registration & login stage
+        primaryStage.setScene(new Scene(root)); // Size for Registration & login stage 590, 400
         primaryStage.setResizable(false);
         primaryStage.show();
         //Scene scene = primaryStage.getScene();

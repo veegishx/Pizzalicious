@@ -2,12 +2,17 @@ package CustomerClient.Controllers;
 
 import javafx.animation.FadeTransition;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
+import javafx.stage.Stage;
 import javafx.util.Duration;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.Calendar;
 import java.util.ResourceBundle;
@@ -44,4 +49,20 @@ public class DashboardController implements Initializable {
     private FadeTransition fadeIn = new FadeTransition(
             Duration.millis(4000)
     );
+
+    public void showMenuWindow() throws IOException {
+        Parent pizzaMenu = FXMLLoader.load(getClass().getResource("../FXMLUserInterfaces/PizzaMenu.fxml"));
+        Stage stage = new Stage();
+        stage.setTitle("Pizza Menu");
+        stage.setScene(new Scene(pizzaMenu, 1350, 700));
+        stage.show();
+    }
+
+    public void showOrderWindow() throws IOException {
+        Parent pizzaMenu = FXMLLoader.load(getClass().getResource("../FXMLUserInterfaces/OrderPizza.fxml"));
+        Stage stage = new Stage();
+        stage.setTitle("Order Pizza");
+        stage.setScene(new Scene(pizzaMenu, 1350, 700));
+        stage.show();
+    }
 }

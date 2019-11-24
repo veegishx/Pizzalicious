@@ -43,7 +43,7 @@
                   <Font name="Segoe UI Bold" size="14.0" />
                </font>
             </Label>
-            <Button fx:id="customerSignInBtn" layoutX="273.0" layoutY="211.0" mnemonicParsing="false" onAction="#customerSignUp" prefHeight="32.0" prefWidth="187.0" style="-fx-background-color: #00aaff; -fx-background-radius: 0;" stylesheets="@Css/RegistrationClient.css" text="SIGN IN" textFill="WHITE">
+            <Button fx:id="customerSignInBtn" layoutX="273.0" layoutY="211.0" mnemonicParsing="false" onAction="#customerSignIn" prefHeight="32.0" prefWidth="187.0" style="-fx-background-color: #00aaff; -fx-background-radius: 0;" stylesheets="@Css/RegistrationClient.css" text="SIGN IN" textFill="WHITE">
                <font>
                   <Font name="Segoe UI Bold" size="12.0" />
                </font></Button>

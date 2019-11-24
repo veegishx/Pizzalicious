@@ -6,6 +6,8 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+import java.util.prefs.Preferences;
+
 public class SignInClient extends Application {
     /*
     Pizzalicious Pizzeria Client JavaFX start() method
