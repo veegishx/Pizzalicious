@@ -19,12 +19,16 @@ import javafx.stage.Stage;
 
 import javafx.scene.image.ImageView;
 
-import java.io.FileNotFoundException;
-import java.io.IOException;
+import java.io.*;
+import java.net.Socket;
 import java.net.URL;
+import java.net.UnknownHostException;
 import java.util.ArrayList;
 import java.util.Random;
 import java.util.ResourceBundle;
+
+import static CustomerClient.Controllers.SignUpController.*;
+
 public class OrderController implements Initializable {
     @FXML private ComboBox<String> orderTypeDropdown;
     @FXML private ComboBox<String> orderSizeDropdown;
@@ -32,6 +36,11 @@ public class OrderController implements Initializable {
     @FXML private ListView<VBox> ordersListView;
     @FXML private Label itemsInOrderQueue;
     @FXML private Label itemsInOrderTotal;
+    public static String serverHostName = "localhost";
+    public static int serverPortNumber = 59090;
+    private Socket connectionSocket;
+    public static ObjectInputStream objInStream;
+    public static ObjectOutput objOutStream;
     int totalOrderPice = 0;
     PizzaOrder pizzaOrder = new PizzaOrder();
     Pizza singlePizzaOrder = new Pizza();
@@ -55,6 +64,22 @@ public class OrderController implements Initializable {
         stage.setTitle("Pizza Menu");
         stage.setScene(new Scene(pizzaMenu, 1350, 700));
         stage.show();
+    }
+
+    public void connect() {
+        try {
+            this.connectionSocket = new Socket(serverHostName, serverPortNumber);
+            InputStream responseFromServer = this.connectionSocket.getInputStream();
+            objInStream = new ObjectInputStream(responseFromServer);
+
+            OutputStream requestToServer = this.connectionSocket.getOutputStream();
+            objOutStream = new ObjectOutputStream(requestToServer);
+
+        } catch (UnknownHostException uhe) {
+            uhe.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     public void updateOrder() throws FileNotFoundException {
@@ -181,8 +206,14 @@ public class OrderController implements Initializable {
         totalOrderPice = 0;
     }
 
-    public void confirmOrderList() {
+    public void confirmOrderList() throws IOException {
+        connect();
         System.out.println(pizzaOrder.toString());
+        objOutStream.writeUTF("order_create");
+        objOutStream.flush();
+
+        objOutStream.writeObject(pizzaOrder);
+        objOutStream.flush();
     }
 
 }
