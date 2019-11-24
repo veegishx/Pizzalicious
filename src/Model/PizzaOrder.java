@@ -10,6 +10,7 @@ public class PizzaOrder implements Serializable {
     private int staffID;
     private ArrayList<Pizza> orderContent;
     private String pizza;
+    private int status;
 
 
 
@@ -23,11 +24,20 @@ public class PizzaOrder implements Serializable {
         this.orderContent = orderContent;
     }
 
-    public PizzaOrder(String pizza,int orderId, double orderTotalPrice, int orderedBy) {
+    public int getStatus() {
+        return status;
+    }
+
+    public void setStatus(int status) {
+        this.status = status;
+    }
+
+    public PizzaOrder(String pizza, int orderId, double orderTotalPrice, int orderedBy, int status) {
         this.orderId = orderId;
         this.orderTotalPrice = orderTotalPrice;
         this.orderedBy = orderedBy;
         this.pizza = pizza;
+        this.status = status;
     }
 
     public String getPizza() {

@@ -17,6 +17,7 @@ import java.net.URL;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.util.Calendar;
 import java.util.ResourceBundle;
 
@@ -24,6 +25,7 @@ public class DashboardController implements Initializable {
     @FXML private AnchorPane pizzaOfTheDayPane;
     @FXML private Label ordersDateLabel;
     @FXML private Label nameLabel;
+    @FXML private Label pendingOrders;
 
     public void initialize(URL url, ResourceBundle resourceBundle) {
         String currentUserEmail = Context.getInstance().currentUser().getEmailAddress();
@@ -52,6 +54,7 @@ public class DashboardController implements Initializable {
         String currentFullDate = currentDate + " " + currentMonth + " " + currentYear;
         ordersDateLabel.setText(currentFullDate.toUpperCase());
 
+        int userIdFetched = getId(currentUserEmail);
         try {
             // create a mysql database connection
             String myDriver = "org.gjt.mm.mysql.Driver";
@@ -59,8 +62,17 @@ public class DashboardController implements Initializable {
             Class.forName(myDriver);
             Connection conn = DriverManager.getConnection(myUrl, "root", "");
 
-            String query = " SELECT * FROM pizzaorder";
+            String query = "SELECT count(orderId) AS n FROM pizzaorder WHERE orderBy=? AND status=?";
+
             PreparedStatement preparedStmt = conn.prepareStatement(query);
+            preparedStmt.setInt(1, userIdFetched);
+            preparedStmt.setInt(2, 0);
+
+            ResultSet RS = preparedStmt.executeQuery();
+            RS.next();
+            int number = RS.getInt("n");
+
+            pendingOrders.setText("You have " + number + " pending orders.");
 
         } catch  (Exception e) {
             System.err.println("Got an exception!");
@@ -86,5 +98,28 @@ public class DashboardController implements Initializable {
         stage.setTitle("Order Pizza");
         stage.setScene(new Scene(pizzaMenu, 1350, 700));
         stage.show();
+    }
+
+    public int getId(String email) {
+        int userId = 0;
+        try {
+            // create a mysql database connection
+            String myDriver = "org.gjt.mm.mysql.Driver";
+            String myUrl = "jdbc:mysql://localhost:3306/Pizzalicious";
+            Class.forName(myDriver);
+            Connection conn = DriverManager.getConnection(myUrl, "root", "");
+
+            String query = "SELECT userId FROM user WHERE email=?";
+            PreparedStatement preparedStmt = conn.prepareStatement(query);
+            preparedStmt.setString(1, email);
+            ResultSet RS = preparedStmt.executeQuery();
+            RS.next();
+            userId = RS.getInt("userId");
+
+        } catch  (Exception e) {
+            System.err.println("Got an exception!");
+            System.err.println(e.getMessage());
+        }// try for database
+        return userId;
     }
 }

@@ -21,7 +21,7 @@
          </effect>
          <children>
             <Label fx:id="ordersDateLabel" layoutX="22.0" layoutY="23.0" text="10 DECEMBER 2019" textFill="#5d6a9c" />
-            <Label layoutX="23.0" layoutY="41.0" prefHeight="57.0" prefWidth="267.0" text="You currently have no pending orders" textFill="WHITE" wrapText="true">
+            <Label fx:id="pendingOrders" layoutX="23.0" layoutY="41.0" prefHeight="57.0" prefWidth="267.0" text="You currently have no pending orders" textFill="WHITE" wrapText="true">
                <font>
                   <Font name="Segoe UI" size="18.0" />
                </font>

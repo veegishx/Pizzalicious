@@ -78,7 +78,8 @@ public class LogInStaffController implements Initializable {
     }
 
     public void showMangeOrder() throws IOException {
-        //code to show dashboard
+        AnchorPane pane = FXMLLoader.load(getClass().getResource("../FXMLUserInterfaces/ManageOrdersDashboard.fxml"));
+        logInStaffPane.getChildren().setAll(pane);
     }
 
     @Override

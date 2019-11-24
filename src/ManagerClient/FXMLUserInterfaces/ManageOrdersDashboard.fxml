@@ -3,44 +3,43 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ListView?>
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
-<?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="748.0" prefWidth="1368.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ManagerClient.Controllers.OrderController">
-  <children>
-    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="800.0" prefWidth="1451.0" VBox.vgrow="ALWAYS">
-         <children>
-            <Button fx:id="ordersRefreshBtn" layoutX="48.0" layoutY="135.0" mnemonicParsing="false" onAction="#ordersRefresh" prefHeight="32.0" prefWidth="108.0" style="-fx-background-color: #00aaff; -fx-background-radius: 0;" text="REFRESH" textFill="WHITE">
-               <font>
-                  <Font name="Segoe UI Bold" size="12.0" />
-               </font></Button>
-            <TableView fx:id="ordersTableView" layoutX="48.0" layoutY="186.0" prefHeight="482.0" prefWidth="768.0" style="-fx-background-color: #e8e8e8;">
-              <columns>
-                <TableColumn prefWidth="96.0" text="CustomerID" />
-                <TableColumn prefWidth="101.0" text="Email" />
-                  <TableColumn prefWidth="174.0" text="Address" />
-              </columns>
-            </TableView>
-            <Label layoutX="48.0" layoutY="27.0" text="Pizzalicious">
-               <font>
-                  <Font name="Dubai Bold" size="24.0" />
-               </font>
-            </Label>
-            <Label layoutX="48.0" layoutY="63.0" text="Orders Management Dashboard" />
-            <ListView fx:id="orderDetailsPane" layoutX="857.0" layoutY="186.0" prefHeight="482.0" prefWidth="434.0" style="-fx-background-color: #e8e8e8;">
-               <effect>
-                  <DropShadow />
-               </effect></ListView>
-            <Label layoutX="857.0" layoutY="135.0" text="Customer Order Details">
-               <font>
-                  <Font name="Dubai Bold" size="24.0" />
-               </font>
-            </Label>
-         </children>
-    </AnchorPane>
-  </children>
-</VBox>
+<AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="800.0" prefWidth="1451.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ManagerClient.Controllers.OrderController">
+   <children>
+      <Button fx:id="ordersRefreshBtn" layoutX="48.0" layoutY="135.0" mnemonicParsing="false" onAction="#ordersRefresh" prefHeight="32.0" prefWidth="108.0" style="-fx-background-color: #0078cf; -fx-background-radius: 0;" text="REFRESH" textFill="WHITE">
+         <font>
+            <Font name="Segoe UI Bold" size="12.0" />
+         </font>
+      </Button>
+      <Label layoutX="48.0" layoutY="27.0" text="Pizzalicious">
+         <font>
+            <Font name="Dubai Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="48.0" layoutY="63.0" text="Orders Management Dashboard" />
+      <Label layoutX="857.0" layoutY="135.0" text="Customer Order Details">
+         <font>
+            <Font name="Dubai Bold" size="24.0" />
+         </font>
+      </Label>
+      <ListView fx:id="listView" layoutX="48.0" layoutY="195.0" prefHeight="472.0" prefWidth="760.0" />
+      <AnchorPane fx:id="ordersPane" layoutX="856.0" layoutY="181.0" prefHeight="493.0" prefWidth="453.0" />
+      <Button fx:id="deleteBtn" layoutX="171.0" layoutY="135.0" mnemonicParsing="false" onAction="#deleteOrder" prefHeight="32.0" prefWidth="108.0" style="-fx-background-color: red; -fx-background-radius: 0;" text="DELETE" textFill="WHITE">
+         <font>
+            <Font name="Segoe UI Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="deliveredStatus" layoutX="507.0" layoutY="134.0" mnemonicParsing="false" onAction="#setToDelivered" prefHeight="32.0" prefWidth="195.0" style="-fx-background-color: #26bf3b; -fx-background-radius: 0;" text="SET ORDER TO DELIVERED" textFill="WHITE">
+         <font>
+            <Font name="Segoe UI Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="preparingStatus" layoutX="295.0" layoutY="135.0" mnemonicParsing="false" onAction="#setToPreparing" prefHeight="32.0" prefWidth="195.0" style="-fx-background-color: #f2b600; -fx-background-radius: 0;" text="SET ORDER TO PREPARING" textFill="WHITE">
+         <font>
+            <Font name="Segoe UI Bold" size="12.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

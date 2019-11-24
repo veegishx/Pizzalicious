@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
@@ -9,8 +10,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane fx:id="registerStaffPane" fx:controller="ManagerClient.Controllers.RegisterStaffController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="585.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane fx:id="registerStaffPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="585.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ManagerClient.Controllers.RegisterStaffController">
    <children>
       <ImageView fitHeight="400.0" fitWidth="641.0" layoutX="-8.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -65,6 +65,8 @@
             <Font size="10.0" />
          </font>
       </Label>
-      <Button onAction="#staffRegistration" layoutX="18.0" layoutY="309.0" mnemonicParsing="false" style="-fx-border-radius: 0; -fx-background-color: #0099ff;" text="CREATE ACCOUNT" />
+      <Button layoutX="18.0" layoutY="309.0" mnemonicParsing="false" onAction="#staffRegistration" style="-fx-border-radius: 0; -fx-background-color: #0099ff;" text="CREATE ACCOUNT" />
+      <Label layoutX="20.0" layoutY="357.0" text="Already got an Account?" textFill="#fcfcfc" />
+      <Hyperlink fx:id="gotAccount" layoutX="171.0" layoutY="353.0" onAction="#showLoginForm" text="Click here to login" />
    </children>
 </AnchorPane>

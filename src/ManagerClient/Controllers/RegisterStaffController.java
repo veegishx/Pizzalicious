@@ -49,7 +49,7 @@ public class RegisterStaffController implements Initializable {
         if (svrStatus.equals("staff_registration_ok")){
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
             alert.setTitle("Pizzalicious Staff Registration Status");
-            alert.setHeaderText("Account Successfully Registered.");
+            alert.setHeaderText("Account Successfully Registered. You can now login.");
             alert.setContentText("Press OK to continue");
             Optional<ButtonType> result = alert.showAndWait();
             showLoginForm();
