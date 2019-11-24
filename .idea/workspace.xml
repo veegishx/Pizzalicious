@@ -2,10 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Pizzalicious/Model/PizzaOrder.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Pizzalicious/Model/PizzaOrder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Pizzalicious/CustomerClient/Controllers/DashboardController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Pizzalicious/CustomerClient/Controllers/DashboardController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Pizzalicious/CustomerClient/Controllers/OrderController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Pizzalicious/CustomerClient/Controllers/OrderController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Pizzalicious/Server/Server.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Pizzalicious/Server/Server.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CustomerClient/Controllers/DashboardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CustomerClient/Controllers/DashboardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CustomerClient/Controllers/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CustomerClient/Controllers/OrderController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ManagerClient/Controllers/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ManagerClient/Controllers/OrderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Pizza.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Pizza.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Model/PizzaOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/PizzaOrder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server/Server.java" afterDir="false" />
     </list>
@@ -317,7 +322,7 @@
       <workItem from="1574402260995" duration="22526000" />
       <workItem from="1574494070870" duration="51000" />
       <workItem from="1574502453288" duration="17543000" />
-      <workItem from="1574572956387" duration="35483000" />
+      <workItem from="1574572956387" duration="38663000" />
     </task>
     <servers />
   </component>

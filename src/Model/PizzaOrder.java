@@ -11,9 +11,10 @@ public class PizzaOrder implements Serializable {
     private ArrayList<Pizza> orderContent;
     private String pizza;
 
-    public PizzaOrder() {
-    }
 
+
+    public  PizzaOrder(){
+    }
     public PizzaOrder(int orderId, double orderTotalPrice, int orderedBy, int staffID, ArrayList<Pizza> orderContent) {
         this.orderId = orderId;
         this.orderTotalPrice = orderTotalPrice;
@@ -22,14 +23,20 @@ public class PizzaOrder implements Serializable {
         this.orderContent = orderContent;
     }
 
-    public PizzaOrder(int orderId, double orderTotalPrice, int orderedBy, int staffID, String pizza) {
+    public PizzaOrder(String pizza,int orderId, double orderTotalPrice, int orderedBy) {
         this.orderId = orderId;
         this.orderTotalPrice = orderTotalPrice;
         this.orderedBy = orderedBy;
-        this.staffID = staffID;
         this.pizza = pizza;
     }
 
+    public String getPizza() {
+        return pizza;
+    }
+
+    public void setPizza(String pizza) {
+        this.pizza = pizza;
+    }
     public int getOrderId() {
         return orderId;
     }
@@ -57,7 +64,7 @@ public class PizzaOrder implements Serializable {
                 ", orderTotalPrice=" + orderTotalPrice +
                 ", orderedBy=" + orderedBy +
                 ", staffID=" + staffID +
-                ", orderContent=" + orderContent +
+                ", pizza=" + pizza +
                 '}';
     }
 

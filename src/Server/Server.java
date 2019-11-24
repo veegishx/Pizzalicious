@@ -277,11 +277,11 @@ public class Server implements Runnable {
                                     orderByResult = resultSet.getInt("orderBy");
                                     orderContentResult = resultSet.getString("orderContent");
                                     staffId = resultSet.getInt("staffId");
-                                    ArrayList<Pizza> ttt = new ArrayList<Pizza>();
-                                    order = new PizzaOrder(orderIdResult, orderTotalPriceResult, orderByResult, staffId, "1");
-                                    System.out.println(orderContentResult);
+                                    order = new PizzaOrder(orderContentResult, orderIdResult, orderTotalPriceResult, orderByResult);
                                     results.add(order);
                                 }
+
+                                outToClient.writeObject(results);
 
                                 for (int i = 0; i < results.size(); i++) {
                                     System.out.println(results.get(i));

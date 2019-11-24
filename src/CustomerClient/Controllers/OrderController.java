@@ -1,5 +1,6 @@
 package CustomerClient.Controllers;
 
+import Model.Context;
 import Model.Pizza;
 import Model.PizzaOrder;
 import javafx.fxml.FXML;
@@ -23,6 +24,10 @@ import java.io.*;
 import java.net.Socket;
 import java.net.URL;
 import java.net.UnknownHostException;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.Random;
 import java.util.ResourceBundle;
@@ -47,6 +52,7 @@ public class OrderController implements Initializable {
     ArrayList<Pizza> pizzaArrayList = new ArrayList<Pizza>();
 
     public void initialize(URL location, ResourceBundle resources) {
+        String currentUserEmail = Context.getInstance().currentUser().getEmailAddress();
         orderTypeDropdown.getItems().removeAll(orderTypeDropdown.getItems());
         orderTypeDropdown.getItems().addAll("Hawaiian Craze", "Spicy Bacon Deluxe", "Spicy 3 Cheese", "Mushroom Cream Light");
         orderTypeDropdown.getSelectionModel().select("Hawaiian Craze");
@@ -171,11 +177,33 @@ public class OrderController implements Initializable {
                 orderListViewThumbnail = new ImageView(new Image("CustomerClient/FXMLUserInterfaces/Images/5.png"));
                 break;
         }
+        String currentUserEmail = Context.getInstance().currentUser().getEmailAddress();
+        int currentUserId = 0;
+        try {
+            // create a mysql database connection
+            String myDriver = "org.gjt.mm.mysql.Driver";
+            String myUrl = "jdbc:mysql://localhost:3306/Pizzalicious";
+            Class.forName(myDriver);
+            Connection conn = DriverManager.getConnection(myUrl, "root", "");
 
+            // create a sql date object so we can use it in our INSERT statement
+
+            // the mysql insert statement
+            String query = "SELECT userId FROM user WHERE email=?";
+            PreparedStatement preparedStmt = conn.prepareStatement(query);
+            preparedStmt.setString(1, currentUserEmail);
+            ResultSet RS = preparedStmt.executeQuery();
+            RS.next();
+            currentUserId = RS.getInt("userId");
+
+        } catch (Exception e) {
+            System.err.println("Got an exception!");
+            e.printStackTrace();
+        }
         // Create a Pizza Object
         singlePizzaOrder = new Pizza(orderType, pizzaPice, orderQuantity, orderSize);
         pizzaArrayList.add(singlePizzaOrder);
-        pizzaOrder = new PizzaOrder(1, totalOrderPice, 1, 1, pizzaArrayList);
+        pizzaOrder = new PizzaOrder(1, totalOrderPice, currentUserId, 1, pizzaArrayList);
 
         orderListViewNo.setTextFill(Color.web("#FFFFFF"));
         orderListViewNo.setFont(new Font("Dubai", 14));

@@ -14,6 +14,9 @@ import javafx.util.Duration;
 
 import java.io.IOException;
 import java.net.URL;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.util.Calendar;
 import java.util.ResourceBundle;
 
@@ -48,6 +51,21 @@ public class DashboardController implements Initializable {
 
         String currentFullDate = currentDate + " " + currentMonth + " " + currentYear;
         ordersDateLabel.setText(currentFullDate.toUpperCase());
+
+        try {
+            // create a mysql database connection
+            String myDriver = "org.gjt.mm.mysql.Driver";
+            String myUrl = "jdbc:mysql://localhost:3306/Pizzalicious";
+            Class.forName(myDriver);
+            Connection conn = DriverManager.getConnection(myUrl, "root", "");
+
+            String query = " SELECT * FROM pizzaorder";
+            PreparedStatement preparedStmt = conn.prepareStatement(query);
+
+        } catch  (Exception e) {
+            System.err.println("Got an exception!");
+            System.err.println(e.getMessage());
+        }// try for database
     }
 
     private FadeTransition fadeIn = new FadeTransition(

@@ -9,6 +9,10 @@ public class Pizza implements Serializable {
     private String pizzaSize;
 
     public Pizza() {
+        this.pizzaType="";
+        this.pizzaPrice=1;
+        this.pizzaQty=1;
+        this.pizzaSize="";
     }
 
     @Override

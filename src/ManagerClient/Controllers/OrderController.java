@@ -33,6 +33,7 @@ public class OrderController implements Initializable {
     private Socket connectionSocket;
     public static ObjectInputStream objInStream;
     public static ObjectOutput objOutStream;
+    @FXML private TableView ordersTableView;
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
     }
