@@ -163,6 +163,9 @@ public class Server implements Runnable {
                                     // execute the preparedstatement
                                     preparedStmt.execute();
 
+                                    outToClient.writeUTF("created_ok");
+                                    outToClient.flush();
+
                                     conn.close();
                                 } catch (Exception e) {
                                     System.err.println("Got an exception!");
@@ -279,6 +282,41 @@ public class Server implements Runnable {
                                 }// try for database
                             }
                             break;
+                        case "read_orders_ID"://
+                            synchronized (this) {
+                                int orderIDCustomer = inFromClient.readInt();
+                                try {
+                                    // create a mysql database connection
+                                    String myDriver = "org.gjt.mm.mysql.Driver";
+                                    String myUrl = "jdbc:mysql://localhost:3306/Pizzalicious";
+                                    Class.forName(myDriver);
+                                    Connection conn = DriverManager.getConnection(myUrl, "root", "");
+
+                                    // create a sql date object so we can use it in our INSERT statement
+
+                                    // the mysql insert statement
+                                    String query = " SELECT orderContent FROM pizzaorder where orderId=?";
+
+                                    // create the mysql insert
+                                    PreparedStatement preparedStmt= conn.prepareStatement(query);;
+                                    preparedStmt.setInt(1, orderIDCustomer);
+                                    ResultSet r1 = preparedStmt.executeQuery();
+                                    String pizzaDetails="";
+                                    while (r1.next()) {
+                                        pizzaDetails = r1.getString("orderContent");
+                                    }
+
+                                    outToClient.writeUTF(pizzaDetails);
+                                    outToClient.flush();
+
+                                    conn.close();
+                                } catch (Exception e) {
+                                    System.err.println("Got an exception!");
+                                    e.printStackTrace();
+                                }// try for database
+                            }
+                            break;
+
                         case "staff_registration":
                             synchronized (this) {
                                 Staff staffRegistration = (Staff) inFromClient.readObject();

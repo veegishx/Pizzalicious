@@ -47,6 +47,7 @@ public class OrderController implements Initializable {
                         + oldValue + " to newValue = " + newValue);
                 try {
                     globalOrderId = newValue.split("\t")[0];
+                    customerDetails(Integer.parseInt(globalOrderId));
                 } catch (Exception e) {
                     System.out.println("Selected Order has been deleted!");
                 }
@@ -70,6 +71,32 @@ public class OrderController implements Initializable {
             e.printStackTrace();
         }
     }
+
+    public void customerDetails(int id) throws IOException {
+        connect();
+        objOutStream.writeUTF("read_orders_ID");
+        objOutStream.flush();
+
+        objOutStream.writeInt(Integer.parseInt(globalOrderId));
+        objOutStream.flush();
+/*
+        Label details = new Label((String)objInStream.readUTF());
+        ordersPane.getChildren().add(details);
+*/
+        String roundTrip = objInStream.readUTF();
+        byte[] bytes= roundTrip.getBytes("cp1252");
+        String roundTrip2 = new String(bytes, "cp1251");
+        System.out.println(roundTrip2);
+
+        Label details = new Label(roundTrip2);
+        details.setWrapText(true);
+        details.setMaxWidth(400);
+        ordersPane.getChildren().clear();
+        ordersPane.getChildren().add(details);
+
+
+    }
+
 
     public void ordersRefresh() throws IOException, ClassNotFoundException {
         connect();

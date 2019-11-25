@@ -29,6 +29,7 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
+import java.util.Optional;
 import java.util.Random;
 import java.util.ResourceBundle;
 
@@ -242,6 +243,15 @@ public class OrderController implements Initializable {
 
         objOutStream.writeObject(pizzaOrder);
         objOutStream.flush();
+
+        String svrStatus = (String) objInStream.readUTF();
+        if (svrStatus.equals("created_ok")) {
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Pizzalicious Order Status");
+            alert.setHeaderText("Order Created");
+            alert.setContentText("Press OK to continue");
+            Optional<ButtonType> result = alert.showAndWait();
+        }
     }
 
 }
